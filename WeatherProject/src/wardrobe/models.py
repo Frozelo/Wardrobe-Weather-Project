@@ -23,10 +23,6 @@ class Clothes(models.Model):
     photo_of_clothes = models.ImageField(upload_to='media/wardrobe', null=True, blank=True)
     favorites = models.BooleanField(default=False)
 
-    # def save(self, *args, **kwargs):
-    #     super(Clothes, self).save(*args, *kwargs)
-    #     from wardrobe.logiv import personal_wardrobe_dict
-    #     personal_wardrobe_dict()
 
     def clean(self):
         super(Clothes, self).clean()
