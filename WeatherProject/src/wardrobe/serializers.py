@@ -14,14 +14,8 @@ class UserSerializer(ModelSerializer):
         fields = ['id', 'username', 'clothes_favorites_count', 'clothes_count']
 
 
-class TypeOfClothesSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TypeOfClothes
-        fields = ('type',)
-
-
 class ClothesSerializer(ModelSerializer):
-    type_of_clothes = TypeOfClothesSerializer(many=True)
+    type_of_clothes = serializers.StringRelatedField()
     owner = serializers.StringRelatedField()
 
     class Meta:
@@ -30,7 +24,3 @@ class ClothesSerializer(ModelSerializer):
 
 
 
-class ClothesJSONSerializer(ModelSerializer):
-    class Meta:
-        model = Clothes_JSON
-        fields = ['json_dict']
