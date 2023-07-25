@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Get City</title>
+</head>
+<body>
+    <h1>City</h1>
+
+    <form method="post" action="{% url 'get_city_for_client_view' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="city">Your city:</label>
+            <input type="text" name="city" id="city" class="form-control">
+        </div>
+        <div class="form-group">
+                <!-- Add other owner options -->
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</body>
+</html>

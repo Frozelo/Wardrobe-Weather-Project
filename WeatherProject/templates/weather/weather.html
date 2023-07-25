@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <h2> <a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a>
+    </h2>
+    <form method="POST" action="{% url 'fetch_weather' %}">
+        {% csrf_token %}
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if temperature and humidity %}
+        <h2>Weather for {{ city }}:</h2>
+        <p>Temperature: {{ temperature }}°C</p>
+        <p>Humidity: {{ humidity }}%</p>
+    {% elif city %}
+        <p>No weather data available for {{ city }}.</p>
+    {% endif %}
+</body>
+</html>

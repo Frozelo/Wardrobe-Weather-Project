@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Save Clothes</title>
+</head>
+<body>
+    <h1>Save Clothes</h1>
+
+    <form method="post" action="{% url 'save_clothes_view' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" name="description" id="description" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="brand">Brand:</label>
+            <input type="text" name="brand" id="brand" class="form-control">
+        </div>
+        <div class="form-group">
+                <!-- Add other owner options -->
+        </div>
+        <!-- Add other form fields for entering clothes information -->
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</body>
+</html>
