@@ -12,15 +12,26 @@
         {% csrf_token %}
         <div class="form-group">
             <label for="description">Description:</label>
-            <input type="text" name="description" id="description" class="form-control">
+            <input type="text" name="description" id="description" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="brand">Brand:</label>
             <input type="text" name="brand" id="brand" class="form-control">
         </div>
         <div class="form-group">
-                <!-- Add other owner options -->
+            <label for="season">Season:</label>
+            <select name="season" id="season" class="form-control" required>
+                {% for season in all_seasons %}
+                    <option value="{{ season.id }}">{{ season.season_name }}</option>
+                {% endfor %}
+            </select>
         </div>
+        <div class="form-group">
+            <label for="min_temp">Temperature range:</label>
+            <input type="text" name="optimal_temp_range" id="optimal_temp_range" class="form-control" required>
+        </div>
+        <div class="form-group">
+
         <!-- Add other form fields for entering clothes information -->
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
