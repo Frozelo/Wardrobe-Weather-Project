@@ -1,4 +1,4 @@
-import json
+import itertools
 
 from django.contrib.auth.decorators import login_required
 
@@ -33,21 +33,21 @@ def save_clothes_logic(request):
     # print(temperature_range)
 
 
-def outfit_logic(request, temperature):
+def outfit_logic(request, temperature=50):
+    """Version 1 - My logic"""
     clothes = Clothes.objects.filter(owner=request.user.id).select_related('owner').select_related('type_of_clothes')
-
 
     clothes_list_2 = {
         'Head': {
             'req': False,
             'status': False,
-
+            'item': None
 
         },
         'Jacket': {
             'req': True,
             'status': False,
-
+            'item': None
 
         },
         'T-shirt': {
@@ -75,8 +75,6 @@ def outfit_logic(request, temperature):
         }
     }
 
-
-
     for item in clothes:
         optimal_temperature = item.optimal_temperature
         if optimal_temperature and float(optimal_temperature.get("min_temp", 0)) <= temperature <= float(
@@ -90,5 +88,42 @@ def outfit_logic(request, temperature):
     if not_found_types:
         print("Fail")
 
-    print(clothes_list_2)
-
+    # print(clothes_list_2)
+    return clothes_list_2
+    # def outfit_logic_2(request, temperature):
+    #     """Version 2 - need to figure out"""
+    #     clothes = Clothes.objects.filter(owner=request.user.id).select_related('owner')
+    #
+    #     # Фильтруем подходящие вещи в соответствии с температурой
+    #     suitable_clothes = [item for item in clothes if is_suitable_temperature(item, temperature)]
+    #
+    #     # Разделяем вещи по категориям
+    #     categories = {
+    #         'Jacket': [],
+    #         'T-shirt': [],
+    #         'Pants': [],
+    #         'Socks': [],
+    #         'Sneakers': []
+    #     }
+    #
+    #     for item in suitable_clothes:
+    #         category = item.type_of_clothes.type
+    #         categories[category].append(item)
+    #
+    #     # Генерируем возможные комбинации для каждой категории
+    #     outfit_combinations = list(
+    #         itertools.product(categories['Jacket'], categories['T-shirt'], categories['Pants'], categories['Socks'],
+    #                           categories['Sneakers']))
+    #
+    #     # Получаем первые 5 аутфитов из списка комбинаций
+    #     outfits = outfit_combinations[:5]
+    #
+    #     for i, outfit in enumerate(outfits):
+    #         print(f'Outfit {i + 1}:')
+    #         for item in outfit:
+    #             print(f'- {item.description_of_clothes}')
+    #
+    # def is_suitable_temperature(item, temperature):
+    #     optimal_temperature = item.optimal_temperature
+    #     return optimal_temperature and float(optimal_temperature.get("min_temp", 0)) <= temperature <= float(
+    #         optimal_temperature.get("max_temp", 0))
