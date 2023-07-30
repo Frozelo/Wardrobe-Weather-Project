@@ -14,6 +14,8 @@ def fetch_weather_logic(request):
 
     response = requests.get(
         f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api_key}&units=metric')
+    weather_data = response.json()
+
 
     # owner_items = Clothes.objects.filter(owner=user).select_related('owner')
     # for item in owner_items:
@@ -21,7 +23,7 @@ def fetch_weather_logic(request):
     #     test_2 = item.type_of_clothes
     #     test_3 = item.optimal_temperature
     #
-    return user, city, response
+    return user, city, response, weather_data
 
 
 def get_city_for_client(request):
