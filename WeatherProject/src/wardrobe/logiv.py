@@ -34,19 +34,61 @@ def save_clothes_logic(request):
 
 
 def outfit_logic(request, temperature):
-    clothes = Clothes.objects.filter(owner=request.user.id).select_related('owner')
+    clothes = Clothes.objects.filter(owner=request.user.id).select_related('owner').select_related('type_of_clothes')
+
+
+    clothes_list_2 = {
+        'Head': {
+            'req': False,
+            'status': False,
+
+
+        },
+        'Jacket': {
+            'req': True,
+            'status': False,
+
+
+        },
+        'T-shirt': {
+            'req': True,
+            'status': False,
+            'item': None
+
+        },
+        'Pants': {
+            'req': True,
+            'status': False,
+            'item': None
+
+        },
+        'Socks': {
+            'req': True,
+            'status': False,
+            'item': None
+        },
+
+        'Sneakers': {
+            'req': True,
+            'status': False,
+            'item': None
+        }
+    }
+
+
 
     for item in clothes:
         optimal_temperature = item.optimal_temperature
-        min_temp = float(optimal_temperature.get("min_temp"))
-        max_temp = float(optimal_temperature.get("max_temp"))
+        if optimal_temperature and float(optimal_temperature.get("min_temp", 0)) <= temperature <= float(
+                optimal_temperature.get("max_temp", 0)):
+            if not clothes_list_2[item.type_of_clothes.type]['status']:
+                clothes_list_2[item.type_of_clothes.type]['status'] = True
+                clothes_list_2[item.type_of_clothes.type]['item'] = item.description_of_clothes
 
-        if min_temp <= temperature <= max_temp:
-            print(
-                f"{item.description_of_clothes} - Success. "
-                f"Minimal temperature:{min_temp}; Maximum temperature:{max_temp}"
-            )
-        else:
-            print(
-                f"{item.description_of_clothes} - Unsuccessful. "
-                f"Minimal temperature:{min_temp}; Maximum temperature:{max_temp}")
+    not_found_types = {k for k, v in clothes_list_2.items() if v['req'] and not v['status']}
+
+    if not_found_types:
+        print("Fail")
+
+    print(clothes_list_2)
+
