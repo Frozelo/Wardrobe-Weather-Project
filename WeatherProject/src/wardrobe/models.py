@@ -14,7 +14,8 @@ class TypeOfClothes(models.Model):
 
 
 class Clothes(models.Model):
-    type_of_clothes = models.ManyToManyField(TypeOfClothes, related_name='type_of_clothes', null=True)
+    type_of_clothes = models.ForeignKey(TypeOfClothes, on_delete=models.SET_NULL, related_name='type_of_clothes',
+                                        null=True)
     description_of_clothes = models.CharField(max_length=255)
     brand = models.CharField(max_length=255)
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -22,11 +23,6 @@ class Clothes(models.Model):
     optimal_temperature = models.JSONField()
     photo_of_clothes = models.ImageField(upload_to='media/wardrobe', null=True, blank=True)
     favorites = models.BooleanField(default=False)
-
-    # def save(self, *args, **kwargs):
-    #     super(Clothes, self).save(*args, *kwargs)
-    #     from wardrobe.logiv import personal_wardrobe_dict
-    #     personal_wardrobe_dict()
 
     def clean(self):
         super(Clothes, self).clean()

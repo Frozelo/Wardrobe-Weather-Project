@@ -9,9 +9,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet
 
-from src.wardrobe.logiv import personal_wardrobe_dict, save_clothes_logic
+from src.wardrobe.logiv import save_clothes_logic
 from src.wardrobe.models import Clothes, Clothes_JSON
-from src.wardrobe.serializers import ClothesSerializer, UserSerializer, ClothesJSONSerializer
+from src.wardrobe.serializers import ClothesSerializer, UserSerializer
 from src.weather.permissions import IsAuthenticatedOrReadOnly
 
 
@@ -22,8 +22,9 @@ class UserViewSet(ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 
+# TODO Finish the queries optimization. It adds 2 more queries in case when we perform user filter.
 class ClothesViewSet(ModelViewSet):
-    queryset = Clothes.objects.all().prefetch_related('owner').prefetch_related('type_of_clothes')
+    queryset = Clothes.objects.all().select_related('owner').select_related('type_of_clothes')
     serializer_class = ClothesSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     ordering_fields = ['id', 'brand']
@@ -31,18 +32,9 @@ class ClothesViewSet(ModelViewSet):
     filterset_fields = ['id', 'owner', 'brand', 'type_of_clothes__type', 'favorites']
 
 
-class ClothesJSONViewSet(ModelViewSet):
-    queryset = Clothes_JSON.objects.all()
-    serializer_class = ClothesJSONSerializer
-
 
 def auth_view(request):
     return render(request, 'oauth.html')
-
-
-def wardrobe_dict_view(request):
-    wardrobe_dict = personal_wardrobe_dict()
-    return JsonResponse(wardrobe_dict, safe=False)
 
 
 @login_required
