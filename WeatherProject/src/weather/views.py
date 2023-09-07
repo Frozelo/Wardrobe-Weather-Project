@@ -17,7 +17,7 @@ def get_city_for_client_view(request):
     return render(request, 'weather/city.html')
 
 
-@login_required
+# @login_required
 def fetch_weather(request):
     if request.method == 'POST':
         user, city, response, weather_data = fetch_weather_logic(request)
@@ -25,7 +25,7 @@ def fetch_weather(request):
         if response.status_code == 200:
             temperature = weather_data['main']['temp']
             humidity = weather_data['main']['humidity']
-            outfit_logic(request, temperature)
+            outfit_logic(user, temperature)
             return render(request, 'weather/weather.html', {
                 'city': city,
                 'temperature': temperature,
