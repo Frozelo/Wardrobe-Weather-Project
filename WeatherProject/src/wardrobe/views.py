@@ -1,17 +1,16 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.db.models import Count, Case, When
+from django.db.models import Count, Case, When, Prefetch
 from django.http import JsonResponse
-
-# Create your views here.
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet
 
-from src.wardrobe.logiv import save_clothes_logic
-from src.wardrobe.models import Clothes, Clothes_JSON
+from src.wardrobe.save_logic import save_clothes_logic
+from src.wardrobe.models import Clothes, Clothes_JSON, TypeOfClothes
 from src.wardrobe.serializers import ClothesSerializer, UserSerializer
+from src.weather.models import Season
 from src.weather.permissions import IsAuthenticatedOrReadOnly
 
 
@@ -22,7 +21,8 @@ class UserViewSet(ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 
-# TODO Finish the queries optimization. It adds 2 more queries in case when we perform user filter.
+# Finish the queries' optimization. It adds 2 more queries in case when we perform user filter.
+# COMPLETE? Strange thing..... need to write about it accurately.
 class ClothesViewSet(ModelViewSet):
     queryset = Clothes.objects.all().select_related('owner').select_related('type_of_clothes')
     serializer_class = ClothesSerializer
@@ -39,6 +39,7 @@ def auth_view(request):
 
 @login_required
 def save_clothes_view(request):
+    all_seasons = Season.objects.all()
     if request.method == 'POST':
         save_clothes_logic(request)
-    return render(request, 'wardrobe/wardrobe.html')
+    return render(request, 'wardrobe/wardrobe.html', {'all_seasons': all_seasons})
