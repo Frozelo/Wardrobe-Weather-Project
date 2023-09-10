@@ -25,7 +25,7 @@ def fetch_weather(request):
         if response.status_code == 200:
             temperature = weather_data['main']['temp']
             humidity = weather_data['main']['humidity']
-            outfit_logic(user, temperature)
+            outfit_logic(user, temperature, style='sport')
             return render(request, 'weather/weather.html', {
                 'city': city,
                 'temperature': temperature,

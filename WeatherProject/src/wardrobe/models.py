@@ -13,6 +13,13 @@ class TypeOfClothes(models.Model):
         return f'{self.type}'
 
 
+class Style(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
 class Clothes(models.Model):
     type_of_clothes = models.ForeignKey(TypeOfClothes, on_delete=models.SET_NULL, related_name='type_of_clothes',
                                         null=True, blank=True)
@@ -20,6 +27,7 @@ class Clothes(models.Model):
     brand = models.CharField(max_length=255)
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     season = models.ManyToManyField(Season)
+    style = models.ManyToManyField(Style, blank=True)
     optimal_temperature = models.JSONField()
     photo_of_clothes = models.ImageField(upload_to='media/wardrobe', null=True, blank=True)
     favorites = models.BooleanField(default=False)
