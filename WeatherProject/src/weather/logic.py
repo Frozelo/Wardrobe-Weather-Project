@@ -16,7 +16,6 @@ def fetch_weather_logic(request):
         f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api_key}&units=metric')
     weather_data = response.json()
 
-
     # owner_items = Clothes.objects.filter(owner=user).select_related('owner')
     # for item in owner_items:
     #     test_1 = item.description_of_clothes
