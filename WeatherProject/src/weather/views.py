@@ -3,8 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 # from rest_framework.permissions import IsAuthenticated
 from src.client.models import Client
+from src.wardrobe.logiv import outfit_logic
 from src.weather.api_keys import weather_api_key
-from src.weather.logic import get_city_for_client
+from src.weather.logic import get_city_for_client, fetch_weather_logic
 
 
 # Create your views here.
@@ -16,25 +17,18 @@ def get_city_for_client_view(request):
     return render(request, 'weather/city.html')
 
 
-@login_required
+# @login_required
 def fetch_weather(request):
     if request.method == 'POST':
-        user = request.user
-        client = Client.objects.get(user=user)
-        city = client.city
-
-        response = requests.get(
-            f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api_key}&units=metric')
-
+        user, city, response, weather_data = fetch_weather_logic(request)
+        print(response.status_code)
         if response.status_code == 200:
-            weather_data = response.json()
-
             temperature = weather_data['main']['temp']
             humidity = weather_data['main']['humidity']
+            outfit_logic(user, temperature, style='sport')
             return render(request, 'weather/weather.html', {
                 'city': city,
                 'temperature': temperature,
                 'humidity': humidity
             })
-
     return render(request, 'weather/weather.html')
