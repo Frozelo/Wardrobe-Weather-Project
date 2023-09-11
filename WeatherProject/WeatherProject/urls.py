@@ -35,6 +35,7 @@ urlpatterns = [
     re_path('', include('social_django.urls', namespace='social')),
     path('auth/', auth_view),
     path('weather/', include('src.weather.urls')),
+    path('weather/', include('src.weather.urls')),
     path('api/', include(router_cloths.urls)),
     path('api/  ', include(router_users.urls)),
     path('wardrobe/save/', save_clothes_view, name='save_clothes_view'),

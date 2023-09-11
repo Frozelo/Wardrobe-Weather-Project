@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'src.weather.middlewares.extract_user_middleware.ExtractUserMiddleware',
 ]
 
 ROOT_URLCONF = 'WeatherProject.urls'

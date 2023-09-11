@@ -26,7 +26,7 @@ class Clothes(models.Model):
     description_of_clothes = models.CharField(max_length=255)
     brand = models.CharField(max_length=255)
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    season = models.ManyToManyField(Season)
+    season = models.ManyToManyField(Season, blank=True)
     style = models.ManyToManyField(Style, blank=True)
     optimal_temperature = models.JSONField()
     photo_of_clothes = models.ImageField(upload_to='media/wardrobe', null=True, blank=True)

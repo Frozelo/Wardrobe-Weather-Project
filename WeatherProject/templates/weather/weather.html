@@ -4,19 +4,41 @@
     <title>Weather App</title>
 </head>
 <body>
-    <h1>Weather App</h1>
-    <h2> <a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a>
-    </h2>
-    <form method="POST" action="{% url 'fetch_weather' %}">
-        {% csrf_token %}
-        <button type="submit">Get Weather</button>
-    </form>
-    {% if temperature and humidity %}
-        <h2>Weather for {{ city }}:</h2>
-        <p>Temperature: {{ temperature }}°C</p>
-        <p>Humidity: {{ humidity }}%</p>
-    {% elif city %}
-        <p>No weather data available for {{ city }}.</p>
-    {% endif %}
+<h1>Weather App</h1>
+<h2><a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a>
+</h2>
+<form method="POST" action="{% url 'fetch_weather' %}">
+    {% csrf_token %}
+    <div class="outfit-option-container">
+        <h2>Select Style:</h2>
+        <select name="style" id="style" class="form-control" required>
+            <option value="casual">Casual</option>
+            <option value="sport">Sport</option>
+            <!-- Добавьте другие стили -->
+        </select>
+
+        <h2>Select Season:</h2>
+        <select name="season" id="season" class="form-control" required>
+            <option value="Summer">Summer</option>
+            <option value="Autumn">Autumn</option>
+            <option value="Winter">Winter</option>
+            <!-- Добавьте другие сезоны -->
+        </select>
+    </div>
+    <button type="submit">Get Weather</button>
+</form>
+{% if temperature and humidity %}
+<h2>Weather for {{ city }}:</h2>
+<p>Temperature: {{ temperature }}°C</p>
+<p>Humidity: {{ humidity }}%</p>
+{% elif city %}
+<p>No weather data available for {{ city }}.</p>
+{% endif %}
+<p>{{clothes_set}}</p>
+
+<form method="POST" action="{% url 'get_clothes_set_view' %}">
+    {% csrf_token %}
+    <button type="submit">Get Clothes Set</button>
+</form>
 </body>
 </html>
