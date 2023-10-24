@@ -5,8 +5,7 @@
 </head>
 <body>
 <h1>Weather App</h1>
-<h2><a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a>
-</h2>
+<h2><a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a></h2>
 <form method="POST" action="{% url 'fetch_weather' %}">
     {% csrf_token %}
     <div class="outfit-option-container">
@@ -34,11 +33,10 @@
 {% elif city %}
 <p>No weather data available for {{ city }}.</p>
 {% endif %}
-<p>{{clothes_set}}</p>
 
-<form method="POST" action="{% url 'get_clothes_set_view' %}">
-    {% csrf_token %}
-    <button type="submit">Get Clothes Set</button>
-</form>
+{% if clothes_list_2 %}
+<h2>Clothes List 2:</h2>
+    {{clothes_list_2}}
+{% endif %}
 </body>
 </html>

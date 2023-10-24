@@ -27,25 +27,27 @@ def fetch_weather(request):
         temperature = weather_data['main']['temp']
         request.session['temperature'] = temperature
         humidity = weather_data['main']['humidity']
-        season_ids = request.POST.getlist('season')
-        style_ids = request.POST.getlist('style')
-        print(season_ids)
+        season_id = request.POST.get('season')
+        style_id = request.POST.get('style')
+        clothes_list_2 = outfit_logic(user, temperature, season_id, style_id)
+        print(clothes_list_2)
         return render(request, 'weather/weather.html', {
             'city': city,
             'temperature': temperature,
             'humidity': humidity,
             'user': user,
+            'clothes_list_2': clothes_list_2,  # Добавьте эту переменную в контекст
         })
 
     return render(request, 'weather/weather.html', {'user': user})
 
 
-def get_clothes_set_view(request):
-    user = request.custom_user
-    temperature = request.session.get('temperature')
-    season_ids = request.POST.getlist('season')
-    style_ids = request.POST.getlist('style')
-    print(season_ids)
-    clothes_list = outfit_logic(user, temperature, season_ids, style_ids)
 
-    return render(request, 'weather/outfit_set.html', {'clothes_list': clothes_list})
+# def get_clothes_set_view(request, season_id, style_id):
+#     user = request.custom_user
+#     temperature = request.session.get('temperature')
+#     print(season_id)
+#     print(style_id)
+#     clothes_list = outfit_logic(user, temperature, season_id, style_id)
+#
+#     return render(request, 'weather/outfit_set.html', {'clothes_list': clothes_list})

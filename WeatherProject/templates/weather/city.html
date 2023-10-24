@@ -11,13 +11,20 @@
     <form method="post" action="{% url 'get_city_for_client_view' %}">
         {% csrf_token %}
         <div class="form-group">
+            <label for="region">Your region:</label>
+            <select name="region" id="region" class="form-control">
+                <option value="">Select a region</option>
+            </select>
+
             <label for="city">Your city:</label>
-            <input type="text" name="city" id="city" class="form-control">
+            <select name="city" id="city" class="form-control">
+                <option value="">Select a city</option>
+            </select>
         </div>
         <div class="form-group">
-                <!-- Add other owner options -->
         </div>
         <button type="submit" class="btn btn-primary">Save</button>
     </form>
+    <script src="{% static 'weather/regions.js' %}"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@ from src.wardrobe.models import Clothes, Clothes_JSON
 def outfit_logic(user, temperature, season, style):
     """Version 1 - My logic"""
     clothes = Clothes.objects.filter(owner=user.id).select_related('owner').select_related(
-        'type_of_clothes').prefetch_related('season')
+        'type_of_clothes')
     clothes_list_2 = {
         'Head': {
             'req': False,
@@ -58,11 +58,11 @@ def outfit_logic(user, temperature, season, style):
         }
     }
     filtered_clothes_by_style = sort_clothes_by_style(clothes, style)
-    suitable_clothes_temperature_and_season(filtered_clothes_by_style, temperature, season, clothes_list_2)
+    suitable_clothes_temperature_and_season(filtered_clothes_by_style,temperature, season, clothes_list_2)
     not_found_types = {k for k, v in clothes_list_2.items() if v['req'] and not v['status']}
     if not_found_types:
-        return season
-    return season
+        return False
+    return clothes_list_2
 
 
 # def outfit_logic_2(user, temperature):
@@ -104,9 +104,9 @@ def is_suitable_temperature(item, temperature):
         optimal_temperature.get("max_temp", 0))
 
 
-def is_suitable_season(item, season):
-    seasons = (item.season.all())  # Получаем все сезоны для данного предмета одежды
-    return seasons.filter(season_name=season).exists()
+# def is_suitable_season(item, season):
+#     seasons = (item.season.all())  # Получаем все сезоны для данного предмета одежды
+#     return seasons.filter(season_name=season).exists()
 
 
 def sort_clothes_by_style(clothes, style):
@@ -114,10 +114,10 @@ def sort_clothes_by_style(clothes, style):
     return clothes.filter(style__name=style)
 
 
-def suitable_clothes_temperature_and_season(clothes, temperature, season, clothes_list_2):
+def suitable_clothes_temperature_and_season(clothes,temperature, season, clothes_list_2):
     """Fills the dictionary with clothing by season temperature and season"""
     for item in clothes:
-        if is_suitable_temperature(item, temperature) and is_suitable_season(item, season):
+        if is_suitable_temperature(item, temperature):
             if not clothes_list_2[item.type_of_clothes.type]['status']:
                 clothes_list_2[item.type_of_clothes.type]['status'] = True
                 clothes_list_2[item.type_of_clothes.type]['item'] = item.description_of_clothes
