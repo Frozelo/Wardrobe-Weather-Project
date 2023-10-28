@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
 from src.client.forms import AvatarUploadForm
+from src.client.logic import get_city_for_client
 from src.wardrobe.models import group_clothes_by_type
 
 
@@ -10,7 +11,6 @@ from src.wardrobe.models import group_clothes_by_type
 def profile(request):
     user = request.user
     clothes_by_type = group_clothes_by_type(user)
-
     first_name = user.first_name
     last_name = user.last_name
     client = user.client
@@ -31,3 +31,13 @@ def profile(request):
                'form': form
                }
     return render(request, 'user/profile.html', context)
+
+
+def settings_view(request):
+    return render(request, 'user/settings.html')
+
+
+def get_city_for_client_view(request):
+    if request.method == 'POST':
+        get_city_for_client(request)
+    return render(request, 'weather/city.html')

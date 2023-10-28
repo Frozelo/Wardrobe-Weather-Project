@@ -5,18 +5,10 @@ from django.shortcuts import render
 from src.client.models import Client
 from src.wardrobe.logiv import outfit_logic
 from src.weather.api_keys import weather_api_key
-from src.weather.logic import get_city_for_client, fetch_weather_logic
+from src.weather.logic import fetch_weather_logic
 from src.weather.models import Season
 from src.weather.middlewares.extract_user_middleware import ExtractUserMiddleware
 
-
-# Create your views here.
-
-
-def get_city_for_client_view(request):
-    if request.method == 'POST':
-        get_city_for_client(request)
-    return render(request, 'weather/city.html')
 
 
 # @login_required

@@ -13,7 +13,6 @@
         <select name="style" id="style" class="form-control" required>
             <option value="casual">Casual</option>
             <option value="sport">Sport</option>
-            <!-- Добавьте другие стили -->
         </select>
 
         <h2>Select Season:</h2>
@@ -31,17 +30,17 @@
     <button type="submit">Test button</button>
 
 </form>
-{% if temperature and humidity %}
-<h2>Weather for {{ city }}:</h2>
-<p>Temperature: {{ temperature }}°C</p>
-<p>Humidity: {{ humidity }}%</p>
-{% elif city %}
-<p>No weather data available for {{ city }}.</p>
-{% endif %}
+    {% if temperature and humidity %}
+    <h2>Weather for {{ city }}:</h2>
+    <p>Temperature: {{ temperature }}°C</p>
+    <p>Humidity: {{ humidity }}%</p>
+    {% elif city %}
+    <p>No weather data available for {{ city }}.</p>
+    {% endif %}
 
-{% if clothes_list_2 %}
-<h2>Clothes List 2:</h2>
-    {{clothes_list_2}}
-{% endif %}
+    {% if clothes_list_2 %}
+    <h2>Clothes List 2:</h2>
+        {{clothes_list_2}}
+    {% endif %}
 </body>
 </html>

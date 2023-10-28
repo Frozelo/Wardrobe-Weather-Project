@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Личный профиль</title>
-  <!-- Подключение Bootstrap CSS (здесь используется CDN, вы также можете использовать локальные файлы) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <!-- Подключение вашего файла стилей -->
   <link rel="stylesheet" href="{% static 'user/profile.css' %}">
 </head>
 <body>
@@ -15,7 +15,12 @@
   <header class="bg-light text-dark py-4">
     <div class="container text-center">
       <h1 class="display-4">Мой личный профиль</h1>
+      <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-dark">Log Out</button>
+      </form>
     </div>
+
   </header>
 
   <!-- Навигация (Sidebar) -->
@@ -23,17 +28,14 @@
     <div class="row">
       <nav class="col-md-3">
         <div class="list-group">
-          <a href="#profile" class="list-group-item list-group-item-action">Профиль</a>
-          <a href="#settings" class="list-group-item list-group-item-action">Настройки</a>
+          <a href="#profile"  class="list-group-item list-group-item-action active">Профиль</a>
+          <a href="settings" class="list-group-item list-group-item-action">Настройки</a>
           <a href="#activity" class="list-group-item list-group-item-action">Активность</a>
           <!-- Добавьте другие ссылки на блоки профиля по желанию -->
         </div>
       </nav>
 
       <!-- Основной контент (Main Content) -->
-      <div class="col-md-9">
-        <!-- Добавление формы загрузки аватара перед блоком "Профиль" -->
-      </form>
 
       <section id="profile">
         <div class="card">
@@ -113,12 +115,30 @@
             </div>
           </div>
         </section>
-        <!-- Добавьте другие блоки профиля и функциональность по желанию -->
+
+        <section id="settings" class="settings-content">
+          <!-- Это место оставьте пустым, здесь будет загружаться содержимое "Настроек" через AJAX -->
+        </section>
       </div>
     </div>
   </div>
+  <script>
+      $(document).on('click', '.settings', function(e) {
+          e.preventDefault();
+          var targetId = $(this).attr('href'); // Получаем ID из атрибута href
+          $.ajax({
+              url: '{% url 'settings' %}',
+              type: 'GET',
+              success: function(data) {
+                  $(targetId).html(data); // Используем атрибут href напрямую
+              },
+              error: function() {
+                  alert('Произошла ошибка при загрузке настроек.');
+              }
+          });
+      });
+  </script>
 
-  <!-- Подключение Bootstrap JavaScript (здесь используется CDN, вы также можете использовать локальные файлы) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
