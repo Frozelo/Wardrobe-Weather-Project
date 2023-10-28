@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный профиль</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'user/profile.css' %}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-light text-dark py-4">
+    <div class="container text-center">
+      <h1 class="display-4">Мой личный профиль</h1>
+      <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-dark">Log Out</button>
+      </form>
+    </div>
+
+  </header>
+
+  <!-- Навигация (Sidebar) -->
+  <div class="container mt-4">
+    <div class="row">
+      <nav class="col-md-3">
+        <div class="list-group">
+          <a href="#profile"  class="list-group-item list-group-item-action active">Профиль</a>
+          <a href="settings" class="list-group-item list-group-item-action">Настройки</a>
+          <a href="#activity" class="list-group-item list-group-item-action">Активность</a>
+          <!-- Добавьте другие ссылки на блоки профиля по желанию -->
+        </div>
+      </nav>
+
+      <!-- Основной контент (Main Content) -->
+
+      <section id="profile">
+        <div class="card">
+          <div class="card-header">
+            <h2>Профиль</h2>
+          </div>
+          <div class="card-body">
+            <!-- Переместим форму внутрь блока "Профиль" -->
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.avatar }}
+              <button type="submit" class="btn btn-primary">Загрузить аватар</button>
+            </form>
+            <!-- Аватар пользователя -->
+            <img src="{{ user.client.avatar.url }}" alt="Avatar" class="avatar">
+            <!-- Личная информация пользователя -->
+            <div class="user-info">
+              <p><strong>Имя:</strong> {{name}}</p>
+              <p><strong>Фамилия:</strong> {{last_name}}</p>
+              <p><strong>Регион:</strong> {{region}}</p>
+              <p><strong>Город:</strong> {{city}}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+        <section id="outfit-suggestions">
+          <div class="card mt-4">
+            <div class="card-header">
+              <h2>Подбор наряда на основе погоды</h2>
+            </div>
+            <div class="card-body">
+              <!-- Здесь будет функционал по подбору наряда -->
+              <p>Сегодня в вашем городе ожидается прохладная погода. Рекомендуемый наряд:</p>
+              <ul>
+                <li>Стильная куртка</li>
+                <li>Свитер с интересным принтом</li>
+                <li>Джинсы</li>
+                <li>Кроссовки</li>
+              </ul>
+              <button class="btn btn-primary">Сгенерировать наряд</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="wardrobe">
+          <div class="card mt-4">
+            <div class="card-header">
+              <h2>Мой гардероб</h2>
+            </div>
+            <div class="card-body">
+              <p>В вашем гардеробе есть следующие вещи:</p>
+              {% for type_name, clothes_list in clothes_by_type.items %}
+              <div class="clothes-category">
+                  <h3 class="category-title">{{ type_name }}</h3>
+                  <ul class="clothes-list">
+                      {% for item in clothes_list %}
+                          <li class="clothes-item">
+                              <div class="clothes-details">
+                                  <div class="clothes-image">
+                                      <img src="{{ item.photo_of_clothes.url }}" alt="{{ item.name }}">
+                                  </div>
+                                  <div class="clothes-info">
+                                      <h4 class="clothes-name">{{ item.description_of_clothes }}</h4>
+                                      <p class="clothes-weather">Идеально для: {{ item.optimal_temperature }}</p>
+                                  </div>
+                              </div>
+                          </li>
+                      {% endfor %}
+                  </ul>
+              </div>
+          {% endfor %}
+
+
+              <button class="btn btn-primary">Управление гардеробом</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="settings" class="settings-content">
+          <!-- Это место оставьте пустым, здесь будет загружаться содержимое "Настроек" через AJAX -->
+        </section>
+      </div>
+    </div>
+  </div>
+  <script>
+      $(document).on('click', '.settings', function(e) {
+          e.preventDefault();
+          var targetId = $(this).attr('href'); // Получаем ID из атрибута href
+          $.ajax({
+              url: '{% url 'settings' %}',
+              type: 'GET',
+              success: function(data) {
+                  $(targetId).html(data); // Используем атрибут href напрямую
+              },
+              error: function() {
+                  alert('Произошла ошибка при загрузке настроек.');
+              }
+          });
+      });
+  </script>
+
+
+</body>
+</html>

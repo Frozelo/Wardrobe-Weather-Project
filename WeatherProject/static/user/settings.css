@@ -1,0 +1,43 @@
+/* Фон страницы */
+body {
+  background-color: #f0f0f0; /* Светло-серый фон */
+  font-family: Arial, sans-serif;
+}
+
+/* Заголовок страницы */
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #333; /* Темно-серый цвет текста */
+}
+
+/* Стили для формы настроек */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555; /* Темно-серый цвет фона при наведении */
+}
