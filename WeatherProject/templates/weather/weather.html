@@ -18,13 +18,18 @@
 
         <h2>Select Season:</h2>
         <select name="season" id="season" class="form-control" required>
+            <option value="Winter">Winter</option>
+            <option value="Spring">Spring</option>
             <option value="Summer">Summer</option>
             <option value="Autumn">Autumn</option>
-            <option value="Winter">Winter</option>
-            <!-- Добавьте другие сезоны -->
         </select>
     </div>
     <button type="submit">Get Weather</button>
+</form>
+<form method='POST' action ="{% url 'get_clothes_set_view' %}">
+    {% csrf_token %}
+    <button type="submit">Test button</button>
+
 </form>
 {% if temperature and humidity %}
 <h2>Weather for {{ city }}:</h2>

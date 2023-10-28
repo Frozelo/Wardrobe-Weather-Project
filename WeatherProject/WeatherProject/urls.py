@@ -15,10 +15,13 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 
 from django.urls import path, include, re_path
 from rest_framework.routers import SimpleRouter
 
+from src.client.views import profile
 from src.wardrobe.views import ClothesViewSet, UserViewSet, save_clothes_view, \
     auth_view
 from src.weather.views import get_city_for_client_view
@@ -39,5 +42,8 @@ urlpatterns = [
     path('api/', include(router_cloths.urls)),
     path('api/  ', include(router_users.urls)),
     path('wardrobe/save/', save_clothes_view, name='save_clothes_view'),
-    path('city/save/', get_city_for_client_view, name='get_city_for_client_view')
+    path('city/save/', get_city_for_client_view, name='get_city_for_client_view'),
+    path('profile/', profile, name='profile'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

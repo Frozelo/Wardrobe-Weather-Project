@@ -30,35 +30,51 @@
             "Sakhalin": ["Yuzhno-Sakhalinsk", "Korsakov", "Nevelsk", "Poronaysk"],
             "St. Petersburg": ["St. Petersburg", "Kronstadt", "Peterhof", "Pushkin"],
             "Tula Oblast": ["Tula", "Novomoskovsk", "Alekseyevka", "Bogoroditsk"],
-            "Tula Oblast": ["Tula", "Novomoskovsk", "Alekseyevka", "Bogoroditsk"],
-            "Tula Oblast": ["Tula", "Novomoskovsk", "Alekseyevka", "Bogoroditsk"],
 
         };
 
+
+
         const regionSelect = document.getElementById("region");
-        const citySelect = document.getElementById("city");
+    const citySelect = document.getElementById("city");
+    const submitButton = document.getElementById("submit-button");
 
-        // Заполнение всплывающего списка регионов.
-        for (const region in regionsAndCities) {
-            const option = document.createElement("option");
-            option.value = region;
-            option.textContent = region;
-            regionSelect.appendChild(option);
-        }
+    // Заполнение всплывающего списка регионов.
+    for (const region in regionsAndCities) {
+        const option = document.createElement("option");
+        option.value = region;
+        option.textContent = region;
+        regionSelect.appendChild(option);
+    }
 
-        regionSelect.addEventListener("change", function () {
-            citySelect.innerHTML = '<option value="">Select a city</option>';
+    regionSelect.addEventListener("change", function () {
+        citySelect.innerHTML = '<option value="">Select a city</option>';
 
-            // Получение выбранного региона.
-            const selectedRegion = regionSelect.value;
+        // Получение выбранного региона.
+        const selectedRegion = regionSelect.value;
 
-            // Заполнение списка городов на основе выбранного региона.
-            if (selectedRegion in regionsAndCities) {
-                for (const city of regionsAndCities[selectedRegion]) {
-                    const option = document.createElement("option");
-                    option.value = city;
-                    option.textContent = city;
-                    citySelect.appendChild(option);
-                }
+        // Заполнение списка городов на основе выбранного региона.
+        if (selectedRegion in regionsAndCities) {
+            for (const city of regionsAndCities[selectedRegion]) {
+                const option = document.createElement("option");
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
             }
-        });
+        }
+        checkSelection();
+    });
+
+    citySelect.addEventListener("change", checkSelection);
+
+    function checkSelection() {
+        // Проверяем, что регион и город не равны "Select a region" и "Select a city".
+        if (regionSelect.value !== "" && citySelect.value !== "") {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    }
+
+    // Изначально отключаем кнопку "Save".
+    submitButton.disabled = true;

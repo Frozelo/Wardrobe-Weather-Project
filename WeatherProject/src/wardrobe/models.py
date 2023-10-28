@@ -20,6 +20,21 @@ class Style(models.Model):
         return self.name
 
 
+def group_clothes_by_type(user):
+    clothes = Clothes.objects.filter(owner=user.id).select_related('owner').prefetch_related(
+        'type_of_clothes')
+    clothes_by_type = {}
+    for item in clothes:
+        type_name = item.type_of_clothes.type
+        if type_name in clothes_by_type:
+            clothes_by_type[type_name].append(item)
+        else:
+            clothes_by_type[type_name] = [item]
+    print(clothes_by_type)
+
+    return clothes_by_type
+
+
 class Clothes(models.Model):
     type_of_clothes = models.ForeignKey(TypeOfClothes, on_delete=models.SET_NULL, related_name='type_of_clothes',
                                         null=True, blank=True)
@@ -29,7 +44,7 @@ class Clothes(models.Model):
     season = models.ManyToManyField(Season, blank=True)
     style = models.ManyToManyField(Style, blank=True)
     optimal_temperature = models.JSONField()
-    photo_of_clothes = models.ImageField(upload_to='media/wardrobe', null=True, blank=True)
+    photo_of_clothes = models.ImageField(upload_to='wardrobe/clothes', null=True, blank=True)
     favorites = models.BooleanField(default=False)
 
     def clean(self):
