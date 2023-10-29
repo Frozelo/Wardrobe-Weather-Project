@@ -1,14 +1,13 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.db.models import Count, Case, When, Prefetch
-from django.http import JsonResponse
+from django.db.models import Count, Case, When
 from django.shortcuts import render
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet
 
-from src.wardrobe.save_logic import save_clothes_logic
-from src.wardrobe.models import Clothes, Clothes_JSON, TypeOfClothes
+from src.wardrobe.services.clothes_save_logic import save_clothes_logic
+from src.wardrobe.models import Clothes
 from src.wardrobe.serializers import ClothesSerializer, UserSerializer
 from src.weather.models import Season
 from src.weather.permissions import IsAuthenticatedOrReadOnly
