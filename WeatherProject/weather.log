@@ -1,4 +1,5 @@
 WARNING:django.request:Not Found: /
+<<<<<<< HEAD
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
 INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\WeatherProject\settings.py changed, reloading.
@@ -124,3 +125,25 @@ django.db.utils.OperationalError: unknown function: JSON_VALID()
 WARNING:django.request:Not Found: /accounts/login/
 INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\WeatherProject\settings.py changed, reloading.
 WARNING:django.request:Not Found: /accounts/login/
+=======
+WARNING:django.request:Not Found: /accounts/login/
+WARNING:django.request:Not Found: /accounts/login/
+WARNING:django.request:Not Found: /accounts/login/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=None&units=metric HTTP/1.1" 401 108
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=None&units=metric HTTP/1.1" 401 108
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=None&units=metric HTTP/1.1" 401 108
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=None&units=metric HTTP/1.1" 401 108
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 12, in fetch_weather
+    city, response, weather_data = fetch_weather_logic(request, user, need_to_fetch=True)
+TypeError: fetch_weather_logic() got an unexpected keyword argument 'need_to_fetch'
+>>>>>>> bb9b2e9 (??)
