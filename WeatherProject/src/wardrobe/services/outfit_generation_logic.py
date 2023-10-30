@@ -3,9 +3,12 @@ import logging
 from typing import Union, Dict, Optional
 from django.core.exceptions import ObjectDoesNotExist
 from src.wardrobe.models import Clothes
+
 current_season = None
 
 logging.basicConfig(filename='weather.log', level=logging.DEBUG)
+
+
 def get_season():
     now = datetime.datetime.now()
     month = now.month
@@ -42,6 +45,7 @@ def get_suitable_clothes(user, style):
     except Exception as e:
         logging.error(f"An error occurred: {str(e)}")
 
+
 def is_suitable_temperature(item, temperature: float) -> bool:
     optimal_temperature = item.optimal_temperature
     return optimal_temperature and float(optimal_temperature.get("min_temp", 0)) <= temperature <= float(
@@ -49,8 +53,9 @@ def is_suitable_temperature(item, temperature: float) -> bool:
 
 
 def is_suitable_season(item):
-    item_seasons = (item.season.all())
     today_season = get_current_season()
+    item_seasons = (item.season.filter(season_name=today_season))
+    print(item_seasons)
     return item_seasons.filter(season_name=today_season).exists()
 
 

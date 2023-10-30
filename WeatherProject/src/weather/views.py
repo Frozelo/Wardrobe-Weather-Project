@@ -9,7 +9,7 @@ from src.weather.services.fetch_weather_logic import fetch_weather_logic
 def fetch_weather(request):
     # Получаем пользователя из middleware
     user = request.custom_user
-    city, response, weather_data = fetch_weather_logic(request, user, need_to_fetch=True)
+    city, response, weather_data = fetch_weather_logic(request, user)
 
     if response.status_code == 200:
         temperature = weather_data['main']['temp']

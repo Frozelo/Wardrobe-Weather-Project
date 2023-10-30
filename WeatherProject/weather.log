@@ -1,0 +1,126 @@
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\WeatherProject\settings.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.request:Not Found: /static/admin/css/base.css
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+WARNING:django.request:Not Found: /accounts/login/
+WARNING:django.request:Not Found: /static/admin/css/base.css
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+WARNING:django.request:Not Found: /static/admin/css/login.css
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+WARNING:django.request:Not Found: /static/admin/css/login.css
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+WARNING:django.request:Not Found: /static/admin/css/base.css
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+WARNING:django.request:Not Found: /static/admin/css/dashboard.css
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+WARNING:django.request:Not Found: /static/admin/css/dashboard.css
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+WARNING:django.request:Not Found: /static/admin/css/base.css
+WARNING:django.request:Not Found: /static/admin/css/nav_sidebar.css
+WARNING:django.request:Not Found: /static/admin/css/dark_mode.css
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+WARNING:django.request:Not Found: /static/admin/js/nav_sidebar.js
+WARNING:django.request:Not Found: /static/admin/css/responsive.css
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+DEBUG:urllib3.connectionpool:https://github.com:443 "POST /login/oauth/access_token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /user/emails HTTP/1.1" 404 None
+ERROR:django.request:Internal Server Error: /complete/github/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: unknown function: JSON_VALID()
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_django\utils.py", line 46, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_django\views.py", line 31, in complete
+    return do_complete(request.backend, _do_login, user=request.user,
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\actions.py", line 45, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\backends\base.py", line 40, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\utils.py", line 247, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\backends\oauth.py", line 401, in auth_complete
+    return self.do_auth(response['access_token'], response=response,
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\utils.py", line 247, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\backends\oauth.py", line 413, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_django\strategy.py", line 105, in authenticate
+    return authenticate(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\debug.py", line 42, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\__init__.py", line 77, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\backends\base.py", line 80, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\backends\base.py", line 83, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\backends\base.py", line 113, in run_pipeline
+    result = func(*args, **out) or {}
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_core\pipeline\social_auth.py", line 93, in load_extra_data
+    social.set_extra_data(extra_data)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\social_django\storage.py", line 20, in set_extra_data
+    self.save()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 976, in _save_table
+    updated = self._do_update(
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 1040, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 1216, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: unknown function: JSON_VALID()
+WARNING:django.request:Not Found: /accounts/login/
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\WeatherProject\settings.py changed, reloading.
+WARNING:django.request:Not Found: /accounts/login/
