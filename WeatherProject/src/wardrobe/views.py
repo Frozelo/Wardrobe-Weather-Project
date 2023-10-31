@@ -1,12 +1,11 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.db.models import Count, Case, When
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet
-
-from src.wardrobe.services.clothes_save_logic import save_clothes_logic
+from src.wardrobe.services.clothes_CRUD_operations import delete_clothes_logic, save_clothes_logic
 from src.wardrobe.models import Clothes
 from src.wardrobe.serializers import ClothesSerializer, UserSerializer
 from src.weather.models import Season
@@ -42,3 +41,13 @@ def save_clothes_view(request):
     if request.method == 'POST':
         save_clothes_logic(request)
     return render(request, 'wardrobe/wardrobe.html', {'all_seasons': all_seasons})
+
+
+def delete_clothes_view(request):
+    if request.method == 'POST':
+        item_id = request.POST.get('item_id')
+        print(item_id)
+        delete_clothes_logic(request)
+    return redirect('/profile/')
+
+

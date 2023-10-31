@@ -807,3 +807,435 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweatherm
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /accounts/login/
+WARNING:django.request:Not Found: /accounts/login/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+ERROR:django.request:Internal Server Error: /wardrobe/delete
+Traceback (most recent call last):
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py", line 30, in delete_clothes_logic
+    item = Clothes.objects.get(pk=item_id)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+src.wardrobe.models.Clothes.DoesNotExist: Clothes matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\views.py", line 48, in delete_clothes_view
+    delete_clothes_logic(request)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py", line 33, in delete_clothes_logic
+    except Clothes.objects.DoesNotExist:
+AttributeError: 'Manager' object has no attribute 'DoesNotExist'
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+ERROR:django.request:Internal Server Error: /wardrobe/delete
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view src.wardrobe.views.delete_clothes_view didn't return an HttpResponse object. It returned None instead.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py changed, reloading.
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 522
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /wardrobe/delete
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\client\views.py", line 32, in profile
+    return render(request, 'user/profile.html', context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\test\utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete_lothes_view' not found. 'delete_lothes_view' is not a valid view function or pattern name.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\clothes_CRUD_operations.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\client\views.py", line 32, in profile
+    return render(request, 'user/profile.html', context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\test\utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\files.py", line 65, in url
+    self._require_file()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\files.py", line 40, in _require_file
+    raise ValueError(
+ValueError: The 'photo_of_clothes' attribute has no file associated with it.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\client\views.py", line 32, in profile
+    return render(request, 'user/profile.html', context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\test\utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\files.py", line 65, in url
+    self._require_file()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\files.py", line 40, in _require_file
+    raise ValueError(
+ValueError: The 'photo_of_clothes' attribute has no file associated with it.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+TypeError: 'ImageFieldFile' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\client\views.py", line 32, in profile
+    return render(request, 'user/profile.html', context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\test\utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\files.py", line 65, in url
+    self._require_file()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\fields\files.py", line 40, in _require_file
+    raise ValueError(
+ValueError: The 'photo_of_clothes' attribute has no file associated with it.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
