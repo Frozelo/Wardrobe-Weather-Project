@@ -147,3 +147,663 @@ Traceback (most recent call last):
     city, response, weather_data = fetch_weather_logic(request, user, need_to_fetch=True)
 TypeError: fetch_weather_logic() got an unexpected keyword argument 'need_to_fetch'
 >>>>>>> bb9b2e9 (??)
+WARNING:django.request:Not Found: /
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 12, in fetch_weather
+    city, response, weather_data = fetch_weather_logic(request, user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 15, in fetch_weather_logic
+    client = Client.objects.get(user=user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+src.client.models.Client.DoesNotExist: Client matching query does not exist.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 112, in outfit_logic
+    fill_clothes_list(filtered_clothes_by_style, temperature, clothes_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 67, in fill_clothes_list
+    for item in clothes:
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1385, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 593, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 71, in pre_sql_setup
+    self.setup_query()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 62, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 278, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1193, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'season'. Choices are: type_of_clothes, owner
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/city/save
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 45, in get_city_for_client_view
+    return render(request, 'weather/settings.html')
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: weather/settings.html
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x10827a0a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10827a0a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 13, in profile
+    _, _, weather_data = fetch_weather_logic(request, user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 17, in fetch_weather_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10827a0a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x1084acc10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1084acc10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 13, in profile
+    _, _, weather_data = fetch_weather_logic(request, user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 17, in fetch_weather_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x1084acc10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x10a38e790>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10a38e790>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 13, in profile
+    _, _, weather_data = fetch_weather_logic(request, user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 17, in fetch_weather_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10a38e790>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Kazan&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 13, in profile
+    client, region, city, weather_data = fetch_weather_and_client_info_logic(user)
+ValueError: too many values to unpack (expected 4)
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+WARNING:django.request:Not Found: /accounts/login/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): github.com:443
+DEBUG:urllib3.connectionpool:https://github.com:443 "POST /login/oauth/access_token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /user HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /user/emails HTTP/1.1" 404 None
+WARNING:django.request:Not Found: /accounts/profile/
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Irkutsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 462
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/city/save
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py", line 10, in get_city_for_client
+    client = Client.objects.get(user=user_instance).fields('region', 'city')
+AttributeError: 'Client' object has no attribute 'fields'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: client_client.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 41, in get_city_for_client_view
+    get_city_for_client(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py", line 17, in get_city_for_client
+    client.save()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/debug_toolbar/panels/sql/tracking.py", line 246, in execute
+    return self._record(super().execute, sql, params)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/debug_toolbar/panels/sql/tracking.py", line 167, in _record
+    return method(sql, params)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: client_client.user_id
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 113, in outfit_logic
+    fill_clothes_list(filtered_clothes_by_style, temperature, clothes_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 68, in fill_clothes_list
+    for item in clothes:
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 394, in __iter__
+    self._fetch_all()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1385, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 593, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 71, in pre_sql_setup
+    self.setup_query()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 62, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 278, in get_select
+    related_klass_infos = self.get_related_selections(select)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/compiler.py", line 1061, in get_related_selections
+    if not select_related_descend(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query_utils.py", line 304, in select_related_descend
+    raise FieldError(msg)
+django.core.exceptions.FieldError: Field Clothes.type_of_clothes cannot be both deferred and traversed using select_related at the same time.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+ERROR:root:An error occurred: Cannot call select_related() after .values() or .values_list()
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 122, in outfit_logic
+    filtered_clothes_by_style = sort_clothes_by_style(clothes, style)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 71, in sort_clothes_by_style
+    return clothes.filter(style__name=style)
+AttributeError: 'NoneType' object has no attribute 'filter'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+ERROR:root:An error occurred: Cannot call select_related() after .values() or .values_list()
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 122, in outfit_logic
+    filtered_clothes_by_style = sort_clothes_by_style(clothes, style)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 71, in sort_clothes_by_style
+    return clothes.filter(style__name=style)
+AttributeError: 'NoneType' object has no attribute 'filter'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+ERROR:root:An error occurred: Cannot call select_related() after .values() or .values_list()
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 122, in outfit_logic
+    filtered_clothes_by_style = sort_clothes_by_style(clothes, style)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 71, in sort_clothes_by_style
+    return clothes.filter(style__name=style)
+AttributeError: 'NoneType' object has no attribute 'filter'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 123, in outfit_logic
+    fill_clothes_list(filtered_clothes_by_style, temperature, clothes_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 79, in fill_clothes_list
+    if not clothes_list[item.type_of_clothes.type]['status']:
+AttributeError: 'dict' object has no attribute 'type_of_clothes'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 124, in outfit_logic
+    fill_clothes_list(filtered_clothes_by_style, temperature, clothes_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 80, in fill_clothes_list
+    if not clothes_list[item.type_of_clothes.type]['status']:
+AttributeError: 'dict' object has no attribute 'type_of_clothes'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 124, in outfit_logic
+    fill_clothes_list(filtered_clothes_by_style, temperature, clothes_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py", line 80, in fill_clothes_list
+    if not clothes_list[item.type_of_clothes.type]['status']:
+AttributeError: 'dict' object has no attribute 'type_of_clothes'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Shelekhov&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 517
+WARNING:django.request:Not Found: /accounts/login/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Baltiysk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 521

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 # from rest_framework.permissions import IsAuthenticated
 from src.wardrobe.services.outfit_generation_logic import outfit_logic
-from src.weather.services.fetch_weather_logic import fetch_weather_logic
+from src.weather.services.fetch_weather_logic import fetch_weather_and_client_info_logic
 
 
 # @login_required
@@ -9,7 +9,7 @@ from src.weather.services.fetch_weather_logic import fetch_weather_logic
 def fetch_weather(request):
     # Получаем пользователя из middleware
     user = request.custom_user
-    city, response, weather_data = fetch_weather_logic(request, user)
+    _, _, city, weather_data, response = fetch_weather_and_client_info_logic(user)
 
     if response.status_code == 200:
         temperature = weather_data['main']['temp']

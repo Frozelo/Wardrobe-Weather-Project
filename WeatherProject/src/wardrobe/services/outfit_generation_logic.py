@@ -1,7 +1,10 @@
 import datetime
 import logging
 from typing import Union, Dict, Optional
+
+from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
+
 from src.wardrobe.models import Clothes
 
 current_season = None
@@ -29,6 +32,7 @@ def get_season():
     return seasons.get(month, "Unknown")
 
 
+# TODO I don't think a global variable is a good decision in this logic
 def get_current_season():
     global current_season
     if current_season is None:
@@ -38,7 +42,8 @@ def get_current_season():
 
 def get_suitable_clothes(user, style):
     try:
-        return Clothes.objects.filter(owner=user.id).select_related('owner').select_related(
+        return Clothes.objects.defer('brand', 'photo_of_clothes', 'favorites').filter(owner=user).select_related(
+            'owner').select_related(
             'type_of_clothes').filter(style__name=style)
     except ObjectDoesNotExist:
         return None
@@ -54,9 +59,7 @@ def is_suitable_temperature(item, temperature: float) -> bool:
 
 def is_suitable_season(item):
     today_season = get_current_season()
-    item_seasons = (item.season.filter(season_name=today_season))
-    print(item_seasons)
-    return item_seasons.filter(season_name=today_season).exists()
+    return item.season.filter(season_name=today_season).exists()
 
 
 def sort_clothes_by_style(clothes, style: str):
@@ -64,11 +67,13 @@ def sort_clothes_by_style(clothes, style: str):
     return clothes.filter(style__name=style)
 
 
+# TODO Pay attention to this function because it needs to good queries optimization
+# DONE Added a status check of clothes status in dict. If it's true we don't need to call is_suitable function
 def fill_clothes_list(clothes, temperature: float, clothes_list: dict):
     """Fills the dictionary with clothing by season temperature and season"""
     for item in clothes:
-        if is_suitable_temperature(item, temperature) and is_suitable_season(item):
-            if not clothes_list[item.type_of_clothes.type]['status']:
+        if not clothes_list[item.type_of_clothes.type]['status']:
+            if is_suitable_temperature(item, temperature) and is_suitable_season(item):
                 clothes_list[item.type_of_clothes.type]['status'] = True
                 clothes_list[item.type_of_clothes.type]['item'] = item.description_of_clothes
 
