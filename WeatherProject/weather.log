@@ -1239,3 +1239,352 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweatherm
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 524
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Krasnoyarsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 524
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:PIL.Image:Importing BlpImagePlugin
+DEBUG:PIL.Image:Importing BmpImagePlugin
+DEBUG:PIL.Image:Importing BufrStubImagePlugin
+DEBUG:PIL.Image:Importing CurImagePlugin
+DEBUG:PIL.Image:Importing DcxImagePlugin
+DEBUG:PIL.Image:Importing DdsImagePlugin
+DEBUG:PIL.Image:Importing EpsImagePlugin
+DEBUG:PIL.Image:Importing FitsImagePlugin
+DEBUG:PIL.Image:Importing FliImagePlugin
+DEBUG:PIL.Image:Importing FpxImagePlugin
+DEBUG:PIL.Image:Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing FtexImagePlugin
+DEBUG:PIL.Image:Importing GbrImagePlugin
+DEBUG:PIL.Image:Importing GifImagePlugin
+DEBUG:PIL.Image:Importing GribStubImagePlugin
+DEBUG:PIL.Image:Importing Hdf5StubImagePlugin
+DEBUG:PIL.Image:Importing IcnsImagePlugin
+DEBUG:PIL.Image:Importing IcoImagePlugin
+DEBUG:PIL.Image:Importing ImImagePlugin
+DEBUG:PIL.Image:Importing ImtImagePlugin
+DEBUG:PIL.Image:Importing IptcImagePlugin
+DEBUG:PIL.Image:Importing JpegImagePlugin
+DEBUG:PIL.Image:Importing Jpeg2KImagePlugin
+DEBUG:PIL.Image:Importing McIdasImagePlugin
+DEBUG:PIL.Image:Importing MicImagePlugin
+DEBUG:PIL.Image:Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG:PIL.Image:Importing MpegImagePlugin
+DEBUG:PIL.Image:Importing MpoImagePlugin
+DEBUG:PIL.Image:Importing MspImagePlugin
+DEBUG:PIL.Image:Importing PalmImagePlugin
+DEBUG:PIL.Image:Importing PcdImagePlugin
+DEBUG:PIL.Image:Importing PcxImagePlugin
+DEBUG:PIL.Image:Importing PdfImagePlugin
+DEBUG:PIL.Image:Importing PixarImagePlugin
+DEBUG:PIL.Image:Importing PngImagePlugin
+DEBUG:PIL.Image:Importing PpmImagePlugin
+DEBUG:PIL.Image:Importing PsdImagePlugin
+DEBUG:PIL.Image:Importing QoiImagePlugin
+DEBUG:PIL.Image:Importing SgiImagePlugin
+DEBUG:PIL.Image:Importing SpiderImagePlugin
+DEBUG:PIL.Image:Importing SunImagePlugin
+DEBUG:PIL.Image:Importing TgaImagePlugin
+DEBUG:PIL.Image:Importing TiffImagePlugin
+DEBUG:PIL.Image:Importing WebPImagePlugin
+DEBUG:PIL.Image:Importing WmfImagePlugin
+DEBUG:PIL.Image:Importing XbmImagePlugin
+DEBUG:PIL.Image:Importing XpmImagePlugin
+DEBUG:PIL.Image:Importing XVThumbImagePlugin
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+WARNING:django.request:Not Found: /we
+WARNING:django.request:Not Found: /weathe
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+ERROR:django.request:Internal Server Error: /admin/wardrobe/clothes/add/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1890, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1796, in _changeform_view
+    form_validated = form.is_valid()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\forms.py", line 205, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\forms.py", line 200, in errors
+    self.full_clean()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\forms.py", line 439, in full_clean
+    self._post_clean()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 492, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 1452, in full_clean
+    self.clean()
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\models.py", line 51, in clean
+    if not isinstance(self.optimal_temperature.get("min_temp"), (int, float)):
+AttributeError: 'NoneType' object has no attribute 'get'
+ERROR:django.request:Internal Server Error: /admin/wardrobe/clothes/add/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1890, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\contrib\admin\options.py", line 1796, in _changeform_view
+    form_validated = form.is_valid()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\forms.py", line 205, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\forms.py", line 200, in errors
+    self.full_clean()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\forms.py", line 439, in full_clean
+    self._post_clean()
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\forms\models.py", line 492, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\db\models\base.py", line 1452, in full_clean
+    self.clean()
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\models.py", line 51, in clean
+    if not isinstance(self.optimal_temperature.get("min_temp"), (int, float)):
+AttributeError: 'NoneType' object has no attribute 'get'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py", line 121, in outfit_logic
+    for key, value in clothes.lists.items():
+AttributeError: 'QuerySet' object has no attribute 'lists'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py", line 121, in outfit_logic
+    for key, value in clothes.lists.items():
+AttributeError: 'QuerySet' object has no attribute 'lists'
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py", line 20, in fetch_weather
+    clothes_list_2 = outfit_logic(user, temperature, style_id)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py", line 121, in outfit_logic
+    for key, value in clothes.lists.items():
+AttributeError: 'QuerySet' object has no attribute 'lists'
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 514
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\outfit_generation_logic.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py", line 21, in fetch_weather
+    clothes_list_test = OutfitLogic.outfit_logic(user, temperature, style_id)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py", line 107, in outfit_logic
+    ClothesManager.fill_clothes_list(filtered_clothes_by_style, temperature, clothes_list)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py", line 61, in fill_clothes_list
+    if ClothesManager.is_suitable_temperature(item, temperature) and ClothesManager.is_suitable_season(
+TypeError: is_suitable_season() missing 1 required positional argument: 'today_season'
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py", line 21, in fetch_weather
+    clothes_list_test = OutfitLogic.outfit_logic(user, temperature, style_id)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py", line 107, in outfit_logic
+    ClothesManager.fill_clothes_list(filtered_clothes_by_style, temperature, today_season, clothes_list)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py", line 61, in fill_clothes_list
+    if ClothesManager.is_suitable_temperature(item, temperature) and ClothesManager.is_suitable_season(
+TypeError: is_suitable_temperature() takes 1 positional argument but 2 were given
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Иван\AppData\Local\Programs\Python\Python38\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py", line 21, in fetch_weather
+    clothes_list_test = OutfitLogic.outfit_logic(user, temperature, style_id)
+TypeError: outfit_logic() missing 1 required positional argument: 'style'
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\wardrobe\services\test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+INFO:django.utils.autoreload:C:\Users\Иван\PycharmProjects\WeatherProject\Wardrobe-Weather-Project\WeatherProject\src\weather\views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sochi&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 513

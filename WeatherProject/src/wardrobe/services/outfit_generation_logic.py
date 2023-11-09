@@ -40,7 +40,7 @@ def get_current_season():
     return current_season
 
 
-def get_suitable_clothes(user, style):
+def get_clothes_and_filter_by_style(user, style):
     try:
         return Clothes.objects.defer('brand', 'photo_of_clothes', 'favorites').filter(owner=user).select_related(
             'owner').select_related(
@@ -49,6 +49,9 @@ def get_suitable_clothes(user, style):
         return None
     except Exception as e:
         logging.error(f"An error occurred: {str(e)}")
+
+
+
 
 
 def is_suitable_temperature(item, temperature: float) -> bool:
@@ -82,9 +85,10 @@ def outfit_logic(user, temperature: float, style: str) -> Union[bool, Dict[str, 
     Dict[str, Optional[bool]], Dict[str, Optional[bool]], Dict[str, Optional[bool]], Dict[str, Optional[bool]], Dict[
         str, Optional[bool]], Dict[str, Optional[bool]]]]]:
     """Version 1 - My logic"""
-    clothes = get_suitable_clothes(user, style)
+    clothes = get_clothes_and_filter_by_style(user, style)
     clothes_list = {
         'Head': {
+            'types': ['Cap', 'Hat'],
             'req': False,
             'status': False,
             'item': None
@@ -117,7 +121,8 @@ def outfit_logic(user, temperature: float, style: str) -> Union[bool, Dict[str, 
     }
     filtered_clothes_by_style = sort_clothes_by_style(clothes, style)
     fill_clothes_list(filtered_clothes_by_style, temperature, clothes_list)
-    not_found_types = {k for k, v in clothes_list.items() if v['req'] and not v['status']}
-    if not_found_types:
-        return False
+
+    for key, value in clothes_list.items():
+        if value['req'] and not value['status']:
+            return False
     return clothes_list

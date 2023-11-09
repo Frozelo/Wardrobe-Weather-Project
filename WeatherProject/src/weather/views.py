@@ -1,6 +1,7 @@
 from django.shortcuts import render
 # from rest_framework.permissions import IsAuthenticated
 from src.wardrobe.services.outfit_generation_logic import outfit_logic
+from src.wardrobe.services.test_file import OutfitLogic
 from src.weather.services.fetch_weather_logic import fetch_weather_and_client_info_logic
 
 
@@ -17,14 +18,16 @@ def fetch_weather(request):
         request.session['style'] = style_id
         request.session['temperature'] = temperature
         humidity = weather_data['main']['humidity']
+        outfit_logic_instance = OutfitLogic(user, temperature, style_id)
+        clothes_list = outfit_logic_instance.outfit_logic()
         clothes_list_2 = outfit_logic(user, temperature, style_id)
-        print(clothes_list_2)
+        print(clothes_list)
         return render(request, 'weather/weather.html', {
             'city': city,
             'temperature': temperature,
             'humidity': humidity,
             'user': user,
-            'clothes_list_2': clothes_list_2,
+            'clothes_list_2': clothes_list,
         })
 
     return render(request, 'weather/weather.html', {'user': user})
