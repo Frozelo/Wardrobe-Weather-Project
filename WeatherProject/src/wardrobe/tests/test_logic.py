@@ -1,11 +1,8 @@
-import json
-
 from django.contrib.auth.models import User
 from rest_framework.test import APITestCase
 
-from src.wardrobe.logiv import outfit_logic
+from src.wardrobe.services.outfit_generation_logic import outfit_logic
 from src.wardrobe.models import Clothes, TypeOfClothes
-from src.weather.views import fetch_weather
 
 
 class OutfitLogicTestCaseV1(APITestCase):

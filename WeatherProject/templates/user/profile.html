@@ -1,5 +1,5 @@
 {% load static %}
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -50,7 +50,7 @@
               <button type="submit" class="btn btn-primary">Загрузить аватар</button>
             </form>
             <!-- Аватар пользователя -->
-            <img src="{{ user.client.avatar.url }}" alt="Avatar" class="avatar">
+            <img src="{{ client.avatar.url }}" alt="Avatar" class="avatar">
             <!-- Личная информация пользователя -->
             <div class="user-info">
               <p><strong>Имя:</strong> {{name}}</p>
@@ -70,7 +70,7 @@
             </div>
             <div class="card-body">
               <!-- Здесь будет функционал по подбору наряда -->
-              <p>Сегодня в вашем городе ожидается прохладная погода. Рекомендуемый наряд:</p>
+              <p>Сейчас в вашем городе {{weather_data.main.temp}}°C. Рекомендуемый наряд:</p>
               <ul>
                 <li>Стильная куртка</li>
                 <li>Свитер с интересным принтом</li>
@@ -96,9 +96,21 @@
                       {% for item in clothes_list %}
                           <li class="clothes-item">
                               <div class="clothes-details">
-                                  <div class="clothes-image">
-                                      <img src="{{ item.photo_of_clothes.url }}" alt="{{ item.name }}">
-                                  </div>
+                              <div class="clothes-actions">
+                            <form method="post" action="{% url 'delete_clothes_view' %}">
+                                {% csrf_token %}
+                                <input type="hidden" name="item_id" value="{{ item.id }}">
+                                <button type="submit" class="btn btn-danger">
+                                    Удалить вещь
+                                </button>
+                            </form>
+                                <div class="clothes-image">
+                                    {% if item.photo_of_clothes %}
+                                        <img src="{{ item.photo_of_clothes.url }}" alt="{{ item.name }}">
+                                    {% else %}
+                                        <p>No image available</p>
+                                    {% endif %}
+                                </div>
                                   <div class="clothes-info">
                                       <h4 class="clothes-name">{{ item.description_of_clothes }}</h4>
                                       <p class="clothes-weather">Идеально для: {{ item.optimal_temperature }}</p>
@@ -121,23 +133,30 @@
         </section>
       </div>
     </div>
-  </div>
-  <script>
-      $(document).on('click', '.settings', function(e) {
-          e.preventDefault();
-          var targetId = $(this).attr('href'); // Получаем ID из атрибута href
-          $.ajax({
-              url: '{% url 'settings' %}',
-              type: 'GET',
-              success: function(data) {
-                  $(targetId).html(data); // Используем атрибут href напрямую
-              },
-              error: function() {
-                  alert('Произошла ошибка при загрузке настроек.');
-              }
-          });
-      });
-  </script>
+
+
+<!--    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--        <div class="modal-dialog">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title" id="exampleModalLabel">Подтверждение действия</h5>-->
+<!--                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    Вы действительно хотите удалить вещь?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <form method="post" action="{% url 'delete_clothes_view' %}">-->
+<!--                        {% csrf_token %}-->
+<!--                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>-->
+<!--                        <button type="submit" class="btn btn-danger">Удалить</button>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
 
 
 </body>

@@ -7,7 +7,7 @@ def get_city_for_client(request):
     user_instance = request.user
 
     try:
-        client = Client.objects.get(user=user_instance)
+        client = Client.objects.only('region', 'city').get(user=user_instance)
         client.region = region
         client.city = city
         client.save()

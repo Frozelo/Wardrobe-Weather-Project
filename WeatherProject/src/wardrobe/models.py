@@ -30,7 +30,6 @@ def group_clothes_by_type(user):
             clothes_by_type[type_name].append(item)
         else:
             clothes_by_type[type_name] = [item]
-    print(clothes_by_type)
 
     return clothes_by_type
 
