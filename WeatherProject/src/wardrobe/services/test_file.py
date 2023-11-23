@@ -73,9 +73,9 @@ class OutfitLogic:
 
     @staticmethod
     def initialize_clothes_list():
+
         return {
-            'Head': {
-                'types': ['Cap', 'Hat'],
+            'Cap': {
                 'req': False,
                 'status': False,
                 'item': None
@@ -121,4 +121,3 @@ class OutfitLogic:
             if value['req'] and not value['status']:
                 return False
         return True
-

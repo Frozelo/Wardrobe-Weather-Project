@@ -1,5 +1,5 @@
 {% load static %}
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,33 +11,33 @@
   <link rel="stylesheet" href="{% static 'user/profile.css' %}">
 </head>
 <body>
-  <!-- Header -->
-  <header class="bg-light text-dark py-4">
-    <div class="container text-center">
-      <h1 class="display-4">Мой личный профиль</h1>
-      <form method="post" action="{% url 'logout' %}">
-          {% csrf_token %}
-          <button type="submit" class="btn btn-dark">Log Out</button>
-      </form>
-    </div>
 
-  </header>
+<!-- Header -->
+<header class="bg-light text-dark py-4">
+  <div class="container text-center">
+    <h1 class="display-4">Мой личный профиль</h1>
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-dark">Log Out</button>
+    </form>
+  </div>
+</header>
 
-  <!-- Навигация (Sidebar) -->
-  <div class="container mt-4">
-    <div class="row">
-      <nav class="col-md-3">
-        <div class="list-group">
-          <a href="#profile"  class="list-group-item list-group-item-action active">Профиль</a>
-          <a href="settings" class="list-group-item list-group-item-action">Настройки</a>
-          <a href="#activity" class="list-group-item list-group-item-action">Активность</a>
-          <!-- Добавьте другие ссылки на блоки профиля по желанию -->
-        </div>
-      </nav>
+<!-- Навигация (Sidebar) -->
+<div class="container mt-4">
+  <div class="row">
+    <nav class="col-md-3">
+      <div class="list-group">
+        <a href="#profile" class="list-group-item list-group-item-action active">Профиль</a>
+        <a href="settings" class="list-group-item list-group-item-action">Настройки</a>
+        <a href="#activity" class="list-group-item list-group-item-action">Активность</a>
+      </div>
+    </nav>
 
-      <!-- Основной контент (Main Content) -->
+    <!-- Основной контент (Main Content) -->
 
-      <section id="profile">
+
+    <section id="profile">
         <div class="card">
           <div class="card-header">
             <h2>Профиль</h2>
@@ -50,7 +50,11 @@
               <button type="submit" class="btn btn-primary">Загрузить аватар</button>
             </form>
             <!-- Аватар пользователя -->
-            <img src="{{ client.avatar.url }}" alt="Avatar" class="avatar">
+            {% if client.avatar %}
+              <img src="{{ client.avatar.url }}" alt="Avatar" class="avatar">
+            {% else %}
+              <p>No image available</p>
+            {% endif %}
             <!-- Личная информация пользователя -->
             <div class="user-info">
               <p><strong>Имя:</strong> {{name}}</p>
@@ -63,101 +67,94 @@
       </section>
 
 
-        <section id="outfit-suggestions">
-          <div class="card mt-4">
-            <div class="card-header">
-              <h2>Подбор наряда на основе погоды</h2>
-            </div>
-            <div class="card-body">
-              <!-- Здесь будет функционал по подбору наряда -->
-              <p>Сейчас в вашем городе {{weather_data.main.temp}}°C. Рекомендуемый наряд:</p>
-              <ul>
-                <li>Стильная куртка</li>
-                <li>Свитер с интересным принтом</li>
-                <li>Джинсы</li>
-                <li>Кроссовки</li>
+    <section id="wardrobe">
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2>Мой гардероб</h2>
+        </div>
+        <div class="card-body">
+          <p>В вашем гардеробе есть следующие вещи:</p>
+          {% for type_name, clothes_list in clothes_by_type.items %}
+            <div class="clothes-category">
+              <h3 class="category-title">{{ type_name }}</h3>
+              <ul class="clothes-list">
+                {% for item in clothes_list %}
+                  <li class="clothes-item">
+                    <div class="clothes-details">
+                      <div class="clothes-actions">
+                        <form method="post" action="{% url 'delete_clothes_view' %}">
+                          {% csrf_token %}
+                          <input type="hidden" name="item_id" value="{{ item.id }}">
+                          <button type="submit" class="btn btn-danger">
+                            Удалить вещь
+                          </button>
+                        </form>
+                        <!-- Add the Edit button with data-toggle and data-target attributes to open the modal -->
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editClothesModal{{ item.id }}">
+                          Редактировать вещь
+                        </button>
+                      </div>
+                      <div class="clothes-image">
+                        {% if item.photo_of_clothes %}
+                          <img src="{{ item.photo_of_clothes.url }}" alt="{{ item.name }}">
+                        {% else %}
+                          <p>No image available</p>
+                        {% endif %}
+                      </div>
+                      <div class="clothes-info">
+                        <h4 class="clothes-name">{{ item.description_of_clothes }}</h4>
+                        <p class="clothes-weather">Идеально для: {{ item.optimal_temperature }}</p>
+                      </div>
+                    </div>
+                  </li>
+                  <div class="modal fade" id="editClothesModal{{ item.id }}" tabindex="-1" aria-labelledby="editClothesModalLabel{{ item.id }}" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <main>
+                          <h2>Редактирование вещи</h2>
+                          <form method="post" action = "{% url 'update_clothes_view' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="item_id" value="{{ item.id }}">
+
+                            <label for="id_description">Описание:</label>
+                            <input type="text" name="description" id="id_description" value="{{ item.description_of_clothes }}">
+
+                            <label for="id_brand">Бренд:</label>
+                            <input type="text" name="brand" id="id_brand" value="{{ item.brand }}">
+
+                            <label for="id_optimal_temp_range">Температурный диапазон (min:max):</label>
+                            <input type="text" name="optimal_temp_range" id="id_optimal_temp_range" value="{{ item.optimal_temperature.min_temp }}:{{ item.optimal_temperature.max_temp }}">
+
+                            <label>Сезоны:</label>
+                            <select name="season" multiple>
+                                {% for season in all_seasons %}
+                                    <option value="{{ season.id }}" {% if season.id in item.season.all %}selected{% endif %}>{{ season.season_name }}</option>
+                                {% endfor %}
+                            </select>
+
+                            <label>Стили:</label>
+                            <select name="style" multiple>
+                                {% for style in all_styles %}
+                                    <option value="{{ style.id }}" {% if style.id in item.style.all %}selected{% endif %}>{{ style.name }}</option>
+                                {% endfor %}
+                            </select>
+
+
+                            <button type="submit">Сохранить изменения</button>
+                          </form>
+                        </main>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
               </ul>
-              <button class="btn btn-primary">Сгенерировать наряд</button>
             </div>
-          </div>
-        </section>
-
-        <section id="wardrobe">
-          <div class="card mt-4">
-            <div class="card-header">
-              <h2>Мой гардероб</h2>
-            </div>
-            <div class="card-body">
-              <p>В вашем гардеробе есть следующие вещи:</p>
-              {% for type_name, clothes_list in clothes_by_type.items %}
-              <div class="clothes-category">
-                  <h3 class="category-title">{{ type_name }}</h3>
-                  <ul class="clothes-list">
-                      {% for item in clothes_list %}
-                          <li class="clothes-item">
-                              <div class="clothes-details">
-                              <div class="clothes-actions">
-                            <form method="post" action="{% url 'delete_clothes_view' %}">
-                                {% csrf_token %}
-                                <input type="hidden" name="item_id" value="{{ item.id }}">
-                                <button type="submit" class="btn btn-danger">
-                                    Удалить вещь
-                                </button>
-                            </form>
-                                <div class="clothes-image">
-                                    {% if item.photo_of_clothes %}
-                                        <img src="{{ item.photo_of_clothes.url }}" alt="{{ item.name }}">
-                                    {% else %}
-                                        <p>No image available</p>
-                                    {% endif %}
-                                </div>
-                                  <div class="clothes-info">
-                                      <h4 class="clothes-name">{{ item.description_of_clothes }}</h4>
-                                      <p class="clothes-weather">Идеально для: {{ item.optimal_temperature }}</p>
-                                  </div>
-                              </div>
-                          </li>
-                      {% endfor %}
-                  </ul>
-              </div>
           {% endfor %}
-
-
-              <button class="btn btn-primary">Управление гардеробом</button>
-            </div>
-          </div>
-        </section>
-
-        <section id="settings" class="settings-content">
-          <!-- Это место оставьте пустым, здесь будет загружаться содержимое "Настроек" через AJAX -->
-        </section>
+        </div>
       </div>
-    </div>
-
-
-<!--    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
-<!--        <div class="modal-dialog">-->
-<!--            <div class="modal-content">-->
-<!--                <div class="modal-header">-->
-<!--                    <h5 class="modal-title" id="exampleModalLabel">Подтверждение действия</h5>-->
-<!--                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--                </div>-->
-<!--                <div class="modal-body">-->
-<!--                    Вы действительно хотите удалить вещь?-->
-<!--                </div>-->
-<!--                <div class="modal-footer">-->
-<!--                    <form method="post" action="{% url 'delete_clothes_view' %}">-->
-<!--                        {% csrf_token %}-->
-<!--                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>-->
-<!--                        <button type="submit" class="btn btn-danger">Удалить</button>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-
-
+    </section>
+  </div>
+</div>
 
 </body>
 </html>

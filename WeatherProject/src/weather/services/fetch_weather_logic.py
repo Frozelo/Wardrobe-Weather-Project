@@ -18,8 +18,9 @@ def get_client(user):
 
 def fetch_weather_and_client_info_logic(user):
     client = get_client(user)
-    region = client.region
-    city = client.city
+    if client:
+        region = client.region
+        city = client.city
     response = requests.get(
         f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api_key}&units=metric')
     weather_data = response.json()

@@ -2,11 +2,54 @@
 <html>
 <head>
     <title>Weather App</title>
+    <style>
+        /* Стили модального окна */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 <h1>Weather App</h1>
 <h2><a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a></h2>
-<form method="POST" action="{% url 'fetch_weather' %}">
+
+<form id="weatherForm" method="POST" action="{% url 'fetch_weather' %}">
     {% csrf_token %}
     <div class="outfit-option-container">
         <h2>Select Style:</h2>
@@ -17,22 +60,81 @@
     </div>
     <button type="submit">Get Weather</button>
 </form>
-<form method='POST' action ="{% url 'get_clothes_set_view' %}">
-    {% csrf_token %}
-    <button type="submit">Test button</button>
 
-</form>
-    {% if temperature and humidity %}
-    <h2>Weather for {{ city }}:</h2>
-    <p>Temperature: {{ temperature }}°C</p>
-    <p>Humidity: {{ humidity }}%</p>
-    {% elif city %}
-    <p>No weather data available for {{ city }}.</p>
-    {% endif %}
+<!-- Модальное окно -->
+<div id="clothesModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <!-- Внутренняя форма для сохранения шаблона -->
+        <form id="savePresetForm" method="POST" action="{% url 'save_preset' %}">
+            {% csrf_token %}
+            <div id="clothesListContainer">
+                {% if clothes_list_2 %}
+                    <h2>Clothes List:</h2>
+                    <ul id="clothesList">
+                        {% for key, value in clothes_list_2.items %}
+                            <li>{{ key }} - {{ value.item }}</li>
+                        {% endfor %}
+                    </ul>
+                    <!-- Скрытое поле для отправки данных clothes_list на сервер -->
+                    <input name="preset_name" value="{{preset_name}}">
+                    <input type="hidden" name="clothes_list" value="{{ clothes_list_2 }}">
+                {% endif %}
+            </div>
+            <button type="submit">Сохранить шаблон</button>
+        </form>
+    </div>
+</div>
 
-    {% if clothes_list_2 %}
-    <h2>Clothes List 2:</h2>
-        {{clothes_list_2}}
-    {% endif %}
+<!-- Скрипты -->
+<script>
+    // Функция отправки данных формы через Ajax
+    function submitPresetForm() {
+        var form = document.getElementById('savePresetForm');
+        var formData = new FormData(form);
+
+        // Отправка данных формы на сервер через Ajax
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                closeModal(); // Закрыть модальное окно при успешной отправке
+            } else {
+                console.error('Ошибка сохранения шаблона');
+            }
+        })
+        .catch(error => {
+            console.error('Произошла ошибка:', error);
+        });
+    }
+     window.onload = function () {
+        var clothesList = document.getElementById('clothesList');
+        var modal = document.getElementById('clothesModal');
+
+        if (clothesList) {
+            modal.style.display = 'block';
+        }
+    };
+
+    // Закрытие модального окна при клике за его пределами
+    window.onclick = function (event) {
+        var modal = document.getElementById('clothesModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Закрытие модального окна при клике на крестик
+    function closeModal() {
+        var modal = document.getElementById('clothesModal');
+        modal.style.display = 'none';
+    }
+</script>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 # from rest_framework.permissions import IsAuthenticated
 from src.wardrobe.services.outfit_generation_logic import outfit_logic
@@ -5,7 +6,7 @@ from src.wardrobe.services.test_file import OutfitLogic
 from src.weather.services.fetch_weather_logic import fetch_weather_and_client_info_logic
 
 
-# @login_required
+@login_required
 # TODO Where is no logic!!!!
 def fetch_weather(request):
     # Получаем пользователя из middleware
@@ -20,7 +21,6 @@ def fetch_weather(request):
         humidity = weather_data['main']['humidity']
         outfit_logic_instance = OutfitLogic(user, temperature, style_id)
         clothes_list = outfit_logic_instance.outfit_logic()
-        clothes_list_2 = outfit_logic(user, temperature, style_id)
         print(clothes_list)
         return render(request, 'weather/weather.html', {
             'city': city,
