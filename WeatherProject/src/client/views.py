@@ -1,4 +1,4 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
@@ -38,6 +38,12 @@ def user_auth_view(request):
             return JsonResponse({'error': e, 'message': 'An error occurred'}, status=500)
 
     return render(request, 'user/auth.html')
+
+
+def user_logout_view(request):
+    if request.method == 'POST':
+        logout(request)
+        return redirect('user_auth')
 
 
 @login_required
