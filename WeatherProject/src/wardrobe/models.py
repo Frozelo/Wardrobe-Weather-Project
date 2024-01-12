@@ -58,11 +58,12 @@ class Clothes(models.Model):
     def __str__(self):
         return f'{self.description_of_clothes} - {self.type_of_clothes} {self.owner}'
 
+
 class Preset(models.Model):
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=255, blank=True)
     clothes_dict = models.JSONField()
+    likes = models.IntegerField(default=0)
 
     def __str__(self):
         return f"{self.owner} - {self.name}"
-

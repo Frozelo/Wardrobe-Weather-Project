@@ -6172,3 +6172,1519 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweatherm
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Sretensk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 495
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 524
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/preset_logic.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 32, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 64, in __init__
+    self.clothes_list = self.initialize_clothes_list()
+TypeError: initialize_clothes_list() missing 1 required positional argument: 'self'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 32, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 64, in __init__
+    self.clothes_list = self.initialize_clothes_list(self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 77, in initialize_clothes_list
+    for key, value in self.body_part_list:
+ValueError: too many values to unpack (expected 2)
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 32, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 64, in __init__
+    self.clothes_list = self.initialize_clothes_list(self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 77, in initialize_clothes_list
+    for key, value in self.body_part_list.items:
+TypeError: 'builtin_function_or_method' object is not iterable
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 32, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 64, in __init__
+    self.clothes_list = self.initialize_clothes_list(self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 81, in initialize_clothes_list
+    new_dict[value]['status'] = 'False'
+KeyError: 'Cap'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 32, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 64, in __init__
+    self.clothes_list = self.initialize_clothes_list(self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 79, in initialize_clothes_list
+    pre_clothes_list = [value] = {
+ValueError: too many values to unpack (expected 1)
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 32, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 64, in __init__
+    self.clothes_list = self.initialize_clothes_list()
+TypeError: initialize_clothes_list() missing 1 required positional argument: 'self'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+WARNING:django.request:Not Found: /apple-touch-icon-precomposed.png
+WARNING:django.request:Not Found: /apple-touch-icon.png
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 33, in fetch_weather
+    clothes_list = outfit_logic_instance.outfit_logic()
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 70, in outfit_logic
+    self.fill_clothes_list(filtered_clothes_by_style, self.clothes_list, today_season)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 121, in fill_clothes_list
+    if not clothes_list[item.type_of_clothes.type]['status']:
+KeyError: 'Sneakers'
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 33, in fetch_weather
+    clothes_list = outfit_logic_instance.outfit_logic()
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 70, in outfit_logic
+    self.fill_clothes_list(filtered_clothes_by_style, self.clothes_list, today_season)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 121, in fill_clothes_list
+    if not clothes_list[item.type_of_clothes.type]['status']:
+KeyError: 'Sneakers'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 33, in fetch_weather
+    clothes_list = outfit_logic_instance.outfit_logic()
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 70, in outfit_logic
+    self.fill_clothes_list(filtered_clothes_by_style, self.clothes_list, today_season)
+TypeError: fill_clothes_list() takes 3 positional arguments but 4 were given
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 33, in fetch_weather
+    clothes_list = outfit_logic_instance.outfit_logic()
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 70, in outfit_logic
+    self.fill_clothes_list(filtered_clothes_by_style, self.clothes_list, today_season)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py", line 121, in fill_clothes_list
+    print(clothes_list.keys().type())
+AttributeError: 'dict_keys' object has no attribute 'type'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/services/client_city_save.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view src.weather.views.fetch_weather didn't return an HttpResponse object. It returned None instead.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 537
+WARNING:django.request:Not Found: /
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 52, in profile
+    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 52, in profile
+    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 52, in profile
+    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1129)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 52, in profile
+    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 517, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 52, in profile
+    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /accounts/login/
+WARNING:django.request:Not Found: /login
+WARNING:django.request:Not Found: /accounts/login/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 525
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py", line 14, in fetch_weather
+    _, _, city, weather_data, response = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /apple-touch-icon-precomposed.png
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /apple-touch-icon.png
+WARNING:django.request:Not Found: /accounts/login/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 527
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /accounts/login/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 524
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 524
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 524
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 524
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 52, in profile
+    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /apple-touch-icon-precomposed.png
+WARNING:django.request:Not Found: /apple-touch-icon.png
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+ERROR:django.request:Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/connection.py", line 419, in connect
+    self.sock = ssl_wrap_socket(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 52, in profile
+    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/fetch_weather_logic.py", line 24, in fetch_weather_and_client_info_logic
+    response = requests.get(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(60, 'Operation timed out'))
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/urls.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/urls.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+WARNING:django.request:Not Found: /profile/presets
+WARNING:django.request:Not Found: /profile/presets
+WARNING:django.request:Not Found: /profile/presets
+WARNING:django.request:Not Found: /profile/presets
+WARNING:django.request:Not Found: /profile/presets
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/models.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 80, in saved_presets_view
+    presets = Preset.objects.filter(owner=user).select_related(user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1539, in select_related
+    obj.query.add_select_related(fields)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 2275, in add_select_related
+    for part in field.split(LOOKUP_SEP):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'User' object has no attribute 'split'
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 80, in saved_presets_view
+    presets = Preset.objects.filter(owner=user).select_related(user.id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1539, in select_related
+    obj.query.add_select_related(fields)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 2275, in add_select_related
+    for part in field.split(LOOKUP_SEP):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+AttributeError: 'User' object has no attribute 'split'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 80, in saved_presets_view
+    presets = Preset.objects.filter(owner=user).select_related(user.id)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1539, in select_related
+    obj.query.add_select_related(fields)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 2275, in add_select_related
+    for part in field.split(LOOKUP_SEP):
+AttributeError: 'int' object has no attribute 'split'
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 80, in saved_presets_view
+    presets = Preset.objects.filter(owner=user).select_related(owner=user)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/query.py", line 1539, in select_related
+    obj.query.add_select_related(fields)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/db/models/sql/query.py", line 2275, in add_select_related
+    for part in field.split(LOOKUP_SEP):
+AttributeError: 'int' object has no attribute 'split'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 80, in saved_presets_view
+    presets = Preset.objects.filter(owner=user).select_related(owner=user)
+TypeError: select_related() got an unexpected keyword argument 'owner'
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 80, in saved_presets_view
+    presets = Preset.objects.filter(owner=user).select_related()
+TypeError: select_related() got an unexpected keyword argument 'owner'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 85, in saved_presets_view
+    return render(request, 'user/saved_presets.html', context=context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 226, in render
+    raise ValueError(
+ValueError: Need 2 values to unpack in for loop; got 1. 
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 85, in saved_presets_view
+    return render(request, 'user/saved_presets.html', context=context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 854, in do_for
+    nodelist_loop = parser.parse(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1492, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'json_script', expected 'endwith'. Did you forget to register or load this tag?
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/WeatherProject/settings.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 85, in saved_presets_view
+    return render(request, 'user/saved_presets.html', context=context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 854, in do_for
+    nodelist_loop = parser.parse(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1492, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 37: 'json_script', expected 'endwith'. Did you forget to register or load this tag?
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 85, in saved_presets_view
+    return render(request, 'user/saved_presets.html', context=context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 854, in do_for
+    nodelist_loop = parser.parse(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1492, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 38: 'json_script', expected 'endwith'. Did you forget to register or load this tag?
+ERROR:django.request:Internal Server Error: /profile/saved-presets
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'json_script'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 85, in saved_presets_view
+    return render(request, 'user/saved_presets.html', context=context)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 854, in do_for
+    nodelist_loop = parser.parse(
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 1492, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/template/base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 38: 'json_script', expected 'endwith'. Did you forget to register or load this tag?
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/models.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/urls.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/urls.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/urls.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/wardrobe/urls.py changed, reloading.
+WARNING:django.request:Not Found: /like_preset/
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/presets.py changed, reloading.
+WARNING:django.request:Not Found: /like_preset/
+WARNING:django.request:Not Found: /like_preset/
+WARNING:django.request:Not Found: /like_preset/
+WARNING:django.request:Not Found: /like_preset/
+WARNING:django.request:Not Found: /like_preset/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+WARNING:django.request:Not Found: /saved-presets/like_preset/
+WARNING:django.request:Not Found: /saved-presets/like_preset/
+WARNING:django.request:Not Found: /saved-presets/like_preset/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+WARNING:django.request:Not Found: /profile/profile/saved-presets/like_preset/
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /profile/like_preset/
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /profile/like_preset/
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /profile/like_preset/
+ERROR:django.request:Internal Server Error: /profile/like_preset/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view src.client.views.like_preset_view didn't return an HttpResponse object. It returned None instead.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/like_preset/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/debug_toolbar/panels/headers.py", line 49, in generate_stats
+    self.response_headers = dict(sorted(response.items()))
+AttributeError: 'WSGIRequest' object has no attribute 'items'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/like_preset/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 93, in like_preset_view
+    print(request.data)
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/like_preset/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 93, in like_preset_view
+    print(request.id)
+AttributeError: 'WSGIRequest' object has no attribute 'id'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/like_preset/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 93, in like_preset_view
+    print(request.POST.data)
+AttributeError: 'QueryDict' object has no attribute 'data'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/presets.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/presets.py changed, reloading.
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/presets.py changed, reloading.
+ERROR:django.request:Internal Server Error: /profile/like_preset/
+Traceback (most recent call last):
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/ivansizov/Documents/work/WeatherProject/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/client/views.py", line 93, in like_preset_view
+    likes_logic(preset_id = request.POST.get("preset_id"))
+TypeError: likes_logic() missing 1 required positional argument: 'request'
+INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/presets.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526

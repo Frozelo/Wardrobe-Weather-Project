@@ -56,10 +56,11 @@ class ClothesManager:
 
 
 class OutfitLogic:
-    def __init__(self, user, temperature: float, style: str):
+    def __init__(self, user, temperature: float, style: str, body_part_list: dict):
         self.user = user
         self.temperature = temperature
         self.style = style
+        self.body_part_list = body_part_list
         self.clothes_list = self.initialize_clothes_list()
 
     def outfit_logic(self):
@@ -71,45 +72,53 @@ class OutfitLogic:
             return False
         return self.clothes_list
 
-    @staticmethod
-    def initialize_clothes_list():
-
-        return {
-            'Cap': {
+    def initialize_clothes_list(self):
+        clothes_list = {}
+        for value in self.body_part_list.values():
+            clothes_list[value] = {
                 'req': False,
                 'status': False,
                 'item': None
-            },
-            'Jacket': {
-                'req': True,
-                'status': False,
-                'item': None
-            },
-            'T-shirt': {
-                'req': True,
-                'status': False,
-                'item': None
-            },
-            'Pants': {
-                'req': True,
-                'status': False,
-                'item': None
-            },
-            'Socks': {
-                'req': True,
-                'status': False,
-                'item': None
-            },
-            'Sneakers': {
-                'req': True,
-                'status': False,
-                'item': None
-            },
-        }
+            }
+        return clothes_list
+
+        # return {
+        #     'Cap': {
+        #         'req': False,
+        #         'status': False,
+        #         'item': None
+        #     },
+        #     'Jacket': {
+        #         'req': True,
+        #         'status': False,
+        #         'item': None
+        #     },
+        #     'T-shirt': {
+        #         'req': True,
+        #         'status': False,
+        #         'item': None
+        #     },
+        #     'Pants': {
+        #         'req': True,
+        #         'status': False,
+        #         'item': None
+        #     },
+        #     'Socks': {
+        #         'req': True,
+        #         'status': False,
+        #         'item': None
+        #     },
+        #     'Sneakers': {
+        #         'req': True,
+        #         'status': False,
+        #         'item': None
+        #     },
+        # }
 
     def fill_clothes_list(self, clothes, clothes_list, today_season):
         for item in clothes:
-            if not clothes_list[item.type_of_clothes.type]['status']:
+            if clothes_list.get(item.type_of_clothes.type) is not None \
+                    and not clothes_list[item.type_of_clothes.type]['status']:
                 if ClothesManager.is_suitable_temperature(item, self.temperature) and ClothesManager.is_suitable_season(
                         item, today_season):
                     clothes_list[item.type_of_clothes.type]['status'] = True
