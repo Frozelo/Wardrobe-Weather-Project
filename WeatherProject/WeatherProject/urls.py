@@ -29,7 +29,6 @@ router_cloths = SimpleRouter()
 router_users = SimpleRouter()
 router_cloths.register(r'wardrobe', ClothesViewSet, basename='wardrobe')
 router_users.register(r'users', UserViewSet)
-# router_cloths.register('', ClothesJSONViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

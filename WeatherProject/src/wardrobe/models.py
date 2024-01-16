@@ -42,7 +42,7 @@ class Clothes(models.Model):
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     season = models.ManyToManyField(Season, blank=True)
     style = models.ManyToManyField(Style, blank=True)
-    optimal_temperature = models.JSONField()
+    optimal_temperature = models.JSONField(blank=True)
     photo_of_clothes = models.ImageField(upload_to='wardrobe/clothes', null=True, blank=True)
     favorites = models.BooleanField(default=False)
 
@@ -59,5 +59,11 @@ class Clothes(models.Model):
         return f'{self.description_of_clothes} - {self.type_of_clothes} {self.owner}'
 
 
-class Clothes_JSON(models.Model):
-    json_dict = models.JSONField()
+class Preset(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    name = models.CharField(max_length=255, blank=True)
+    clothes_dict = models.JSONField()
+    likes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.owner} - {self.name}"

@@ -1,13 +1,15 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.db.models import Count, Case, When
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet
-from src.wardrobe.services.clothes_CRUD_operations import delete_clothes_logic, save_clothes_logic
+from src.wardrobe.services.clothes_CRUD_operations import delete_clothes_logic, save_clothes_logic, update_clothes_logic
 from src.wardrobe.models import Clothes
 from src.wardrobe.serializers import ClothesSerializer, UserSerializer
+from src.wardrobe.services.preset_logic import save_preset
 from src.weather.models import Season
 from src.weather.permissions import IsAuthenticatedOrReadOnly
 
@@ -30,7 +32,6 @@ class ClothesViewSet(ModelViewSet):
     filterset_fields = ['id', 'owner', 'brand', 'type_of_clothes__type', 'favorites']
 
 
-
 def auth_view(request):
     return render(request, 'oauth.html')
 
@@ -45,9 +46,17 @@ def save_clothes_view(request):
 
 def delete_clothes_view(request):
     if request.method == 'POST':
-        item_id = request.POST.get('item_id')
-        print(item_id)
         delete_clothes_logic(request)
     return redirect('/profile/')
 
 
+def update_clothes_view(request):
+    if request.method == 'POST':
+        update_clothes_logic(request)
+    return redirect('/profile/')
+
+
+def save_clothes_preset(request):
+    if request.method == 'POST':
+        save_preset(request)
+    return redirect('/profile/')

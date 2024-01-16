@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Presets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .presets-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .clothes-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+
+        .clothes-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .item-name {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .like-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .like-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .likes-count {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    {% csrf_token %}
+    <h1>Saved Presets</h1>
+
+    <div class="presets-container">
+        {% for preset in presets %}
+            <div class="clothes-item">
+                <h2>{{ preset.name }}</h2>
+                {% with preset.clothes_dict as clothes_dict %}
+                    {% for item_name, item_data in clothes_dict.items %}
+                        <div class="item-name">{{ item_name }}</div>
+                        <p>
+                            <strong>Requirement:</strong> {% if item_data.req %}Yes{% else %}No{% endif %}<br>
+                            <strong>Status:</strong> {% if item_data.status %}Available{% else %}Not Available{% endif %}<br>
+                            <strong>Item:</strong> {{ item_data.item }}
+                        </p>
+                    {% endfor %}
+                {% endwith %}
+
+                <button class="like-btn" data-preset-id="{{ preset.id }}">Like</button>
+                <span class="likes-count">Likes: <span class="likes-value" id="likes-count-{{ preset.id }}">{{ preset.total_likes }}</span></span>
+            </div>
+        {% endfor %}
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".like-btn").click(function() {
+            var presetId = $(this).data('preset-id');
+            var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
+
+            $.ajax({
+                type: 'POST',
+                url: 'like_preset/',
+                data: {'preset_id': presetId, 'csrfmiddlewaretoken': csrfToken},
+                success: function(response) {
+                    if (response.success) {
+                        var likesCountElement = $("#likes-count-" + presetId + " .likes-value");
+                        likesCountElement.text(response.total_likes);
+                    } else {
+                        console.error(response);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error while liking preset: ' + error);
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

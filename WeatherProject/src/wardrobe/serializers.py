@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
 
-from src.wardrobe.models import Clothes, TypeOfClothes, Clothes_JSON
+from src.wardrobe.models import Clothes, TypeOfClothes
 
 
 class UserSerializer(ModelSerializer):
