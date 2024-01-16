@@ -30,8 +30,9 @@ def fetch_weather(request):
                     'bottom_body_secondary': request.POST.get('bottom_body_secondary'),
                     'feet': request.POST.get('feet')
                 }
+                favorites = bool(request.POST.get('favorites'))
 
-                outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+                outfit_logic_instance = OutfitLogic(user, temperature, style_id, favorites, body_part_list)
                 clothes_list = outfit_logic_instance.outfit_logic()
                 print(clothes_list)
                 return render(request, 'weather/weather.html', {
@@ -45,14 +46,3 @@ def fetch_weather(request):
     return render(request, 'weather/weather.html', {'user': request.custom_user})
 
 
-
-
-def get_clothes_set_view(request):
-    user = request.custom_user
-    season = request.session.get('season')
-    style = request.session.get('style')
-    temperature = request.session.get('temperature')
-    print(user)
-    print(temperature)
-    print(f'{season} - {style}')
-    return render(request, 'weather/outfit_set.html')

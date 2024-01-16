@@ -7688,3 +7688,158 @@ TypeError: likes_logic() missing 1 required positional argument: 'request'
 INFO:django.utils.autoreload:/Users/ivansizov/Documents/work/WeatherProject/WeatherProject/src/weather/services/presets.py changed, reloading.
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
 DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 526
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /media/media/wardrobe/3cdad0557a80851ed1de7cb14b847afa.jpg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 515
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+WARNING:django.request:Not Found: /
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 533
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 529
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 529
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 529
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 529
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/home/ivan/projects/Wardrobe-Weather-Project/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/projects/Wardrobe-Weather-Project/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/projects/Wardrobe-Weather-Project/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py", line 34, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list)
+TypeError: OutfitLogic.__init__() missing 1 required positional argument: 'body_part_list'
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+ERROR:django.request:Internal Server Error: /weather/
+Traceback (most recent call last):
+  File "/home/ivan/projects/Wardrobe-Weather-Project/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ivan/projects/Wardrobe-Weather-Project/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ivan/projects/Wardrobe-Weather-Project/venv/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py", line 34, in fetch_weather
+    outfit_logic_instance = OutfitLogic(user, temperature, style_id, body_part_list, favorites=True)
+TypeError: OutfitLogic.__init__() got multiple values for argument 'favorites'
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/wardrobe/services/test_file.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.openweathermap.org:443
+DEBUG:urllib3.connectionpool:https://api.openweathermap.org:443 "GET /data/2.5/weather?q=Divnogorsk&appid=da8eff3043fc441cca70712be72d110b&units=metric HTTP/1.1" 200 523
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/views.py changed, reloading.
+INFO:django.utils.autoreload:/home/ivan/projects/Wardrobe-Weather-Project/WeatherProject/src/weather/urls.py changed, reloading.
