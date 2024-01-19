@@ -2,6 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.fetch_weather, name='fetch_weather'),
+    path('', views.wardrobe_weather_view, name='fetch_weather'),
 
 ]

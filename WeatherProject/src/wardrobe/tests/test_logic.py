@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework.test import APITestCase
 
-from src.wardrobe.services.outfit_generation_logic import outfit_logic
+from src.wardrobe.services.wardrobe_weather_processor import outfit_logic
 from src.wardrobe.models import Clothes, TypeOfClothes
 
 

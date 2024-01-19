@@ -9,13 +9,13 @@ from src.client.models import Client
 from src.client.services.client_city_save import get_city_for_client
 from src.client.services.user_auth import user_auth_logic
 from src.wardrobe.models import group_clothes_by_type, Preset
-from src.weather.services.fetch_weather import fetch_weather_and_client_info_logic
+from src.weather.services.fetch_weather import fetch_weather_by_client
 
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 from .models import Client
-
+from .services.fetch_client import get_client
 
 # TODO - The client model problem.
 #  I need to decide what to do with the client model (I want to merge fields with the user model)
@@ -33,7 +33,7 @@ def user_auth_view(request):
                 if Client.objects.filter(user=user).exists():
                     return redirect('profile')
                 else:
-                    return redirect('settings')
+                    return redirect('/profile/settings')
             else:
                 return JsonResponse({'error': 'Invalid credentials'}, status=401)
         except KeyError as e:
@@ -53,7 +53,8 @@ def user_logout_view(request):
 @login_required
 def profile(request):
     user = request.user
-    client, region, city, weather_data, _ = fetch_weather_and_client_info_logic(user)
+    client = get_client(user)
+    region, city, weather_data, _ = fetch_weather_by_client(user)
     clothes_by_type = group_clothes_by_type(user)
     first_name = user.first_name
     last_name = user.last_name

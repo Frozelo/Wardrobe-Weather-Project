@@ -1,29 +1,9 @@
-import datetime
 import logging
 from typing import Union, Dict, Optional
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 from src.wardrobe.models import Clothes
-
-
-def get_current_season():
-    now = datetime.datetime.now()
-    month = now.month
-    seasons = {
-        1: "Winter",
-        2: "Winter",
-        3: "Spring",
-        4: "Spring",
-        5: "Spring",
-        6: "Summer",
-        7: "Summer",
-        8: "Summer",
-        9: "Autumn",
-        10: "Autumn",
-        11: "Autumn",
-        12: "Winter"
-    }
-    return seasons.get(month, "Unknown")
+from src.weather.services.fetch_weather import get_current_season
 
 
 class ClothesManager:
@@ -41,7 +21,6 @@ class ClothesManager:
             return queryset.defer('brand', 'photo_of_clothes')
         except ObjectDoesNotExist:
             return None
-
 
     @staticmethod
     def is_suitable_temperature(item, temperature: float) -> bool:
@@ -81,39 +60,6 @@ class OutfitLogic:
                 'item': None
             }
         return clothes_list
-
-        # return {
-        #     'Cap': {
-        #         'req': False,
-        #         'status': False,
-        #         'item': None
-        #     },
-        #     'Jacket': {
-        #         'req': True,
-        #         'status': False,
-        #         'item': None
-        #     },
-        #     'T-shirt': {
-        #         'req': True,
-        #         'status': False,
-        #         'item': None
-        #     },
-        #     'Pants': {
-        #         'req': True,
-        #         'status': False,
-        #         'item': None
-        #     },
-        #     'Socks': {
-        #         'req': True,
-        #         'status': False,
-        #         'item': None
-        #     },
-        #     'Sneakers': {
-        #         'req': True,
-        #         'status': False,
-        #         'item': None
-        #     },
-        # }
 
     def fill_clothes_list(self, clothes, clothes_list, today_season):
         for item in clothes:

@@ -73,6 +73,10 @@
           <h2>Мой гардероб</h2>
         </div>
         <div class="card-body">
+          {% if not clothes_by_type %}
+          <p>В гардеробе нет записей с вещами</p>
+
+          {% else %}
           <p>В вашем гардеробе есть следующие вещи:</p>
           {% for type_name, clothes_list in clothes_by_type.items %}
             <div class="clothes-category">
@@ -147,9 +151,11 @@
                     </div>
                   </div>
                 {% endfor %}
+
               </ul>
             </div>
           {% endfor %}
+          {% endif %}
         </div>
       </div>
     </section>
