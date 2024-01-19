@@ -34,6 +34,15 @@ def group_clothes_by_type(user):
     return clothes_by_type
 
 
+RATE_CHOICES = [
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5)
+]
+
+
 class Clothes(models.Model):
     type_of_clothes = models.ForeignKey(TypeOfClothes, on_delete=models.SET_NULL, related_name='type_of_clothes',
                                         null=True, blank=True)
@@ -44,6 +53,7 @@ class Clothes(models.Model):
     style = models.ManyToManyField(Style, blank=True)
     optimal_temperature = models.JSONField(blank=True)
     photo_of_clothes = models.ImageField(upload_to='wardrobe/clothes', null=True, blank=True)
+    rate = models.IntegerField(choices=RATE_CHOICES, null=True, blank=True)
     favorites = models.BooleanField(default=False)
 
     def clean(self):

@@ -28,7 +28,6 @@ def save_clothes_logic(request):
 
 @permission_classes([IsAdminOrOwner])
 def delete_clothes_logic(request):
-    print('wow')
     if request.method == 'POST':
         item_id = request.POST.get('item_id')
         print(item_id)

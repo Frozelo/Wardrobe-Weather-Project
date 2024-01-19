@@ -16,11 +16,11 @@ from django.contrib.auth import authenticate, login
 from django.http import JsonResponse
 from .models import Client
 from .services.fetch_client import get_client
+from ..wardrobe.services.preset_logic import likes_logic
+
 
 # TODO - The client model problem.
 #  I need to decide what to do with the client model (I want to merge fields with the user model)
-from ..weather.services.presets import likes_logic
-
 
 def user_auth_view(request):
     if request.method == 'POST':
@@ -89,9 +89,10 @@ def saved_presets_view(request):
     }
     return render(request, 'user/saved_presets.html', context=context)
 
+
 def like_preset_view(request):
     if request.method == "POST":
-        likes_logic(preset_id = request.POST.get("preset_id"))
+        likes_logic(preset_id=request.POST.get("preset_id"))
     return HttpResponse(content={"message": "good"})
 
 
