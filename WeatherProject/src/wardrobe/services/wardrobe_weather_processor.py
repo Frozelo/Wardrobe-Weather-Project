@@ -1,4 +1,4 @@
-from src.wardrobe.services.test_file import OutfitLogic
+from src.wardrobe.services.test_file import OutfitGenerator
 from src.weather.services.fetch_weather import fetch_weather_by_client
 
 
@@ -23,8 +23,8 @@ class WeatherRequestProcessor:
 
                 favorites = self.get_third_parties_options()
 
-                outfit_logic_instance = OutfitLogic(user, temperature, style_id, favorites, body_part_list)
-                clothes_list = outfit_logic_instance.outfit_logic()
+                outfit_logic_instance = OutfitGenerator(user, temperature, style_id, favorites, body_part_list)
+                clothes_list = outfit_logic_instance.generate_outfit()
 
                 context = {
                     'city': city,
