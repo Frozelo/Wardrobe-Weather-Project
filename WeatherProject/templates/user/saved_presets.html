@@ -51,35 +51,47 @@
         .likes-count {
             margin-top: 5px;
         }
+
     </style>
 </head>
 <body>
 
-    {% csrf_token %}
-    <h1>Saved Presets</h1>
+{% csrf_token %}
+<h1>Saved Presets</h1>
 
-    <div class="presets-container">
-        {% for preset in presets %}
-            <div class="clothes-item">
-                <h2>{{ preset.name }}</h2>
-                {% with preset.clothes_dict as clothes_dict %}
-                    {% for item_name, item_data in clothes_dict.items %}
-                        <div class="item-name">{{ item_name }}</div>
-                        <p>
-                            <strong>Requirement:</strong> {% if item_data.req %}Yes{% else %}No{% endif %}<br>
-                            <strong>Status:</strong> {% if item_data.status %}Available{% else %}Not Available{% endif %}<br>
-                            <strong>Item:</strong> {{ item_data.item }}
-                        </p>
-                    {% endfor %}
-                {% endwith %}
-
-                <button class="like-btn" data-preset-id="{{ preset.id }}">Like</button>
-                <span class="likes-count">Likes: <span class="likes-value" id="likes-count-{{ preset.id }}">{{ preset.total_likes }}</span></span>
-            </div>
+<div class="presets-container">
+    {% for preset in presets %}
+    <div class="clothes-item">
+        <h2>{{ preset.name }}</h2>
+        {% with preset.clothes_dict as clothes_dict %}
+        {% for item_name, item_data in clothes_dict.items %}
+        <div class="item-name">{{ item_name }}</div>
+        <p>
+            <strong>Requirement:</strong> {% if item_data.req %}Yes{% else %}No{% endif %}<br>
+            <strong>Status:</strong> {% if item_data.status %}Available{% else %}Not Available{% endif %}<br>
+            <strong>Item:</strong> {{ item_data.item }}
+        </p>
         {% endfor %}
+        {% endwith %}
+
+        <button class="like-btn" data-preset-id="{{ preset.id }}">Like</button>
+        <span class="likes-count">Likes: <span class="likes-value" id="likes-count-{{ preset.id }}">{{ preset.total_likes }}</span></span>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div class="clothes-actions">
+        <form method="post" action="{% url 'delete_preset_view' %}">
+            {% csrf_token %}
+            <input type="hidden" name="preset_id" value="{{ preset.id }}">
+            <button type="submit" class="btn btn-danger">
+                Удалить вещь
+            </button>
+        </form>
+        <!-- Add the Edit button with data-toggle and data-target attributes to open the modal -->
+    </div>
+    {% endfor %}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
         $(".like-btn").click(function() {
@@ -104,6 +116,7 @@
             });
         });
     });
+
 </script>
 
 

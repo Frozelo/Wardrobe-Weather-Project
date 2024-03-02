@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
 
-    'src.weather',
-    'src.wardrobe',
-    'src.client',
+    'src.apps.weather',
+    'src.apps.wardrobe',
+    'src.apps.client',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    'src.weather.middlewares.extract_user_middleware.ExtractUserMiddleware',
+    'src.apps.weather.middlewares.extract_user_middleware.ExtractUserMiddleware',
 ]
 
 ROOT_URLCONF = 'WeatherProject.urls'
