@@ -145,7 +145,7 @@
 
 <div class="container">
     <h1 class="text-center mb-4">Weather App</h1>
-    <h2><a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a></h2>
+    <h2><a href="http://127.0.0.1:8000/api/v1/wardrobe/clothes/?owner={{ request.user.id }}">Перейти в гардероб</a></h2>
 
     <form id="weatherForm" method="POST" action="{% url 'fetch_weather' %}">
         {% csrf_token %}

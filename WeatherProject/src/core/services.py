@@ -6,6 +6,7 @@ from .decorators import get_object_or_404_decorator, only_objects_decorator, sel
 #     return get_object_or_404(Client, user=user)
 
 @only_objects_decorator
+@select_related_objects_decorator
 def all_objects(obj: callable):
     return obj.all()
 
@@ -23,4 +24,15 @@ def filter_objects(obj: callable, **kwargs):
 
 
 def create_objects(obj: callable, **kwargs):
+    print(kwargs)
     return obj.create(**kwargs)
+
+def update_objects(obj: callable, **kwargs):
+    for attr, ids, in kwargs.items():
+        print(kwargs)
+        setattr(obj, attr, ids)
+
+def set_related_objects(obj, **kwargs):
+    for field_name, ids in kwargs.items():
+        field = getattr(obj, field_name)
+        field.add(*ids)

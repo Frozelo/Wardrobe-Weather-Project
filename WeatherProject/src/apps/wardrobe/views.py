@@ -11,6 +11,7 @@ from src.apps.wardrobe.serializers import ClothesSerializer, UserSerializer
 from src.apps.wardrobe.services.preset_logic import save_preset
 from src.apps.weather.models import Season
 from src.apps.weather.permissions import IsAuthenticatedOrReadOnly
+from src.apps.weather.services.fetch_sesason import get_all_seasons
 from src.core.services import all_objects
 
 
@@ -23,14 +24,6 @@ class UserViewSet(ModelViewSet):
 
 # Finish the queries' optimization. It adds 2 more queries in case when we perform user filter.
 # COMPLETE? Strange thing..... need to write about it accurately.
-class ClothesViewSet(ModelViewSet):
-    queryset = Clothes.objects.all().select_related('owner').select_related('type_of_clothes')
-    serializer_class = ClothesSerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    ordering_fields = ['id', 'brand']
-    search_fields = ['brand', 'type_of_clothes__type', 'favorites', 'description_of_clothes']
-    filterset_fields = ['id', 'owner', 'brand', 'type_of_clothes__type', 'favorites']
-
 
 def auth_view(request):
     return render(request, 'oauth.html')
@@ -38,8 +31,8 @@ def auth_view(request):
 
 @login_required
 def save_clothes_view(request):
-    seasons_list = all_objects(obj=Season.objects,
-                               )
+    seasons_list = get_all_seasons()
+    print(seasons_list)
     if request.method == 'POST':
         save_clothes_logic(request)
     return render(request, 'wardrobe/wardrobe.html', {'all_seasons': seasons_list})
@@ -54,7 +47,7 @@ def delete_clothes_view(request):
 def update_clothes_view(request):
     if request.method == 'POST':
         update_clothes_logic(request)
-    return redirect('/profile/')
+    return render(request, 'wardrobe/test_file.html')
 
 
 def save_clothes_preset(request):

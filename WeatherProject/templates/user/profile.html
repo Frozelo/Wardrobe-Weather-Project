@@ -88,7 +88,7 @@
                       <div class="clothes-actions">
                         <form method="post" action="{% url 'delete_clothes_view' %}">
                           {% csrf_token %}
-                          <input type="hidden" name="item_id" value="{{ item.id }}">
+                          <input type="hidden" name="id" value="{{ item.id }}">
                           <button type="submit" class="btn btn-danger">
                             Удалить вещь
                           </button>
@@ -118,16 +118,16 @@
                           <h2>Редактирование вещи</h2>
                           <form method="post" action = "{% url 'update_clothes_view' %}">
                             {% csrf_token %}
-                            <input type="hidden" name="item_id" value="{{ item.id }}">
+                            <input type="hidden" name="id" value="{{ item.id }}">
 
                             <label for="id_description">Описание:</label>
-                            <input type="text" name="description" id="id_description" value="{{ item.description_of_clothes }}">
+                            <input type="text" name="description_of_clothes" id="id_description" value="{{ item.description_of_clothes }}">
 
                             <label for="id_brand">Бренд:</label>
                             <input type="text" name="brand" id="id_brand" value="{{ item.brand }}">
 
-                            <label for="id_optimal_temp_range">Температурный диапазон (min:max):</label>
-                            <input type="text" name="optimal_temp_range" id="id_optimal_temp_range" value="{{ item.optimal_temperature.min_temp }}:{{ item.optimal_temperature.max_temp }}">
+                            <label for="optimal_temperature">Температурный диапазон (min:max):</label>
+                            <input type="text" name="optimal_temperature" id="optimal_temperature" value="{{ item.optimal_temperature.min_temp }}:{{ item.optimal_temperature.max_temp }}">
 
                             <label>Сезоны:</label>
                             <select name="season" multiple>

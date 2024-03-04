@@ -13,7 +13,9 @@ class ClothesListView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        clothes = filter_objects(Clothes.objects, owner=request.user)
+        clothes = filter_objects(Clothes.objects,
+                                 owner=request.user,
+                                 select_related=('owner', 'type_of_clothes'))
         serializer = ClothesSerializer(clothes, many=True)
         return JsonResponse(serializer.data, safe=False)
 

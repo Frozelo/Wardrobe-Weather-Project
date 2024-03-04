@@ -3,6 +3,7 @@ from src.apps.wardrobe.services.test_file import OutfitGenerator
 from src.apps.weather.services.fetch_weather import fetch_weather_by_client
 
 
+# TODO decompose this class
 class WeatherRequestProcessor:
     def __init__(self, request):
         self.request = request
@@ -11,7 +12,7 @@ class WeatherRequestProcessor:
         user = self.request.custom_user
         client = get_client(user)
         region, city = fetch_client_info(client)
-        weather_data, response = fetch_weather_by_client(client, region, city)
+        weather_data, response = fetch_weather_by_client(city)
 
         if response.status_code == 200 and 'main' in weather_data:
             temperature = weather_data['main'].get('temp')

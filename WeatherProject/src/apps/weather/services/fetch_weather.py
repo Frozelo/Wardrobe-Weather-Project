@@ -1,17 +1,16 @@
 import datetime
-import os
-
 import requests
-from dotenv import load_dotenv
-from src.apps.client.services.fetch_client import fetch_client_info
+from src.core.open_weather_api_service import get_weather_api_key_from_dotenv
 
-load_dotenv()
-weather_api_key = os.getenv('WEATHER_API_KEY')
+
+def get_current_month():
+    now = datetime.datetime.now()
+    month = now.month
+    return month
 
 
 def get_current_season():
-    now = datetime.datetime.now()
-    month = now.month
+    month = get_current_month()
     seasons = {
         1: "Winter",
         2: "Winter",
@@ -29,9 +28,9 @@ def get_current_season():
     return seasons.get(month, "Unknown")
 
 
-def fetch_weather_by_client(client, region, city):
-
+def fetch_weather_by_client(city):
+    open_weather_api_key = get_weather_api_key_from_dotenv()
     response = requests.get(
-        f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_api_key}&units=metric')
+        f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={open_weather_api_key}&units=metric')
     weather_data = response.json()
     return weather_data, response

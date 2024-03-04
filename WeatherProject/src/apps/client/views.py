@@ -12,6 +12,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .services.fetch_client import get_client
 from src.apps.wardrobe.services.preset_logic import likes_logic, delete_preset_logic
 from .services.avatar_upload import avatar_upload_form_logic
+from ..weather.services.fetch_sesason import get_all_seasons
 from ...core.services import get_objects, filter_objects
 
 
@@ -36,7 +37,8 @@ def profile(request):
     user = request.user
     client = get_object_or_404(Client, user=user)
     region, city = fetch_client_info(client)
-    weather_data, _ = fetch_weather_by_client(client, region, city)
+    seasons_list = get_all_seasons()
+    weather_data, _ = fetch_weather_by_client(city)
     clothes_by_type = group_clothes_by_type(user)
     first_name = user.first_name
     last_name = user.last_name
@@ -46,6 +48,7 @@ def profile(request):
                'last_name': last_name,
                'region': region,
                'city': city,
+               'all_seasons': seasons_list,
                'clothes_by_type': clothes_by_type,
                'weather_data': weather_data,
                'form': form
@@ -69,6 +72,7 @@ def saved_presets_view(request):
         "presets": presets
     }
     return render(request, 'user/saved_presets.html', context=context)
+
 
 def delete_preset_view(request):
     delete_preset_logic(request)

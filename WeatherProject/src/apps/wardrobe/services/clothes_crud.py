@@ -6,39 +6,33 @@ from rest_framework.decorators import permission_classes
 from src.core.services import get_objects, create_objects
 from src.lib.permissions import IsAdminOrOwner
 from src.apps.wardrobe.models import Clothes
+from src.core.services import set_related_objects, update_objects
+from src.core.request_service import get_request_params
 
 
-# TODO create func in core service
 @login_required
 def save_clothes_logic(request):
-    description = request.POST.get('description')
-    brand = request.POST.get('brand')
     owner_id = request.user.id
+    params = get_request_params(request,
+                                params=('description_of_clothes', 'brand', 'optimal_temperature'))
     season_ids = request.POST.getlist('season')
     style_ids = request.POST.getlist('style')
-    temperature_range = request.POST.get('optimal_temp_range')
-    min_temp, max_temp = map(float, temperature_range.split(':'))
-    dict_to_save = {
-        'min_temp': min_temp,
-        'max_temp': max_temp
-    }
     clothes = create_objects(obj=Clothes.objects,
-                             description_of_clothes=description,
-                             brand=brand,
                              owner_id=owner_id,
-                             optimal_temperature=dict_to_save
+                             **params,
                              )
-    clothes.season.set(season_ids)
-    clothes.style.set(style_ids)
+    set_related_objects(obj=clothes,
+                        season=season_ids,
+                        style=style_ids)
 
 
 @permission_classes([IsAdminOrOwner])
 def delete_clothes_logic(request):
-    item_id = request.POST.get('item_id')
-    print(item_id)
+    params = get_request_params(request,
+                                params=('id',))
     try:
         item = get_objects(obj=Clothes.objects,
-                           pk=item_id, )
+                           **params)
         item.delete()
         response_data = {'message': 'Предмет успешно удален'}
         print('Предмет успешно удален')
@@ -51,21 +45,19 @@ def delete_clothes_logic(request):
 @permission_classes([IsAdminOrOwner])
 def update_clothes_logic(request):
     response_data = {'message': 'Ошибка при обновлении предмета'}
-    item_id = request.POST.get('item_id')
-    print(item_id)
+    item_id = request.POST.get('id')
     try:
         clothes = get_object_or_404(Clothes, id=item_id, owner=request.user)
-        description = request.POST.get('description', clothes.description_of_clothes)
-        brand = request.POST.get('brand', clothes.brand)
+        params = get_request_params(request,
+                                    params=('description_of_clothes', 'brand', 'optimal_temperature'))
         season_ids = request.POST.getlist('season')
         style_ids = request.POST.getlist('style')
-        temperature_range = request.POST.get('optimal_temp_range')
-        min_temp, max_temp = map(float, temperature_range.split(':'))
-        clothes.description_of_clothes = description
-        clothes.brand = brand
-        clothes.optimal_temperature = {'min_temp': min_temp, 'max_temp': max_temp}
-        clothes.season.set(season_ids)
-        clothes.style.set(style_ids)
+        update_objects(obj=clothes,
+                       **params, )
+        set_related_objects(obj=clothes,
+                            season=season_ids,
+                            style=style_ids)
+
         clothes.save()
         response_data = {'message': 'Предмет успешно обновлен'}
     except ValueError:

@@ -21,14 +21,10 @@ from django.conf import settings
 from django.urls import path, include, re_path
 from rest_framework.routers import SimpleRouter
 
-from src.apps.wardrobe.views import ClothesViewSet, UserViewSet, auth_view
+from src.apps.wardrobe.views import UserViewSet, auth_view
 
 
-
-
-router_cloths = SimpleRouter()
 router_users = SimpleRouter()
-router_cloths.register(r'wardrobe', ClothesViewSet, basename='wardrobe')
 router_users.register(r'users', UserViewSet)
 
 urlpatterns = [
