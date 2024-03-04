@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
-
+from src.core.services import filter_objects
 # Create your models here.
 from src.apps.weather.models import Season
 
@@ -21,8 +21,11 @@ class Style(models.Model):
 
 
 def group_clothes_by_type(user):
-    clothes = Clothes.objects.filter(owner=user.id).select_related('owner').prefetch_related(
-        'type_of_clothes')
+    clothes = filter_objects(obj=Clothes.objects,
+                             owner=user.id,
+                             select_related=('owner',),
+                             prefetch_related=('type_of_clothes', 'season')
+                             )
     clothes_by_type = {}
     for item in clothes:
         type_name = item.type_of_clothes.type

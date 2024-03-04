@@ -18,6 +18,13 @@ def select_related_objects_decorator(func):
     return wrapper
 
 
+def prefetch_related_objects_decorator(func):
+    def wrapper(obj, prefetch_related=(), *args, **kwargs):
+        return func(obj, *args, **kwargs).prefetch_related(*prefetch_related)
+
+    return wrapper
+
+
 def only_objects_decorator(func):
     def wrapper(obj, only=(), *args, **kwargs):
         return func(obj, *args, **kwargs).only(*only)
@@ -31,4 +38,5 @@ def objects_exist(func):
         if exist:
             return queryset.exists()
         return queryset
+
     return wrapper
