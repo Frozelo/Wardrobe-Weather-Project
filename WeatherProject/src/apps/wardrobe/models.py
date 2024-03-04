@@ -72,7 +72,7 @@ class Clothes(models.Model):
 class Preset(models.Model):
     owner = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=255, blank=True)
-    clothes_dict = models.JSONField()
+    clothes_list = models.JSONField()
     likes = models.IntegerField(default=0)
 
     def __str__(self):

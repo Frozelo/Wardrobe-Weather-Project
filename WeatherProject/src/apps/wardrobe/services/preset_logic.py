@@ -3,19 +3,19 @@ from django.shortcuts import get_object_or_404
 
 from src.apps.wardrobe.models import Preset
 from src.core.services import create_objects, get_objects
+from src.core.request_service import get_request_params
 
 
 def save_preset(request):
     if request.method == 'POST':
         owner = request.user
-        clothes_dict = request.POST.get('clothes_list')
-        preset_name = request.POST.get('preset_name')
-
-        if clothes_dict and preset_name:
+        params = get_request_params(request,
+                                    params=('clothes_list', 'name',))
+        print(params)
+        if params['name']:
             create_objects(obj=Preset.objects,
                            owner=owner,
-                           clothes_dict=clothes_dict,
-                           name=preset_name, )
+                           **params)
 
             return JsonResponse({'status_code': 200, 'message': 'Success'})
         else:
@@ -27,9 +27,9 @@ def save_preset(request):
 def delete_preset_logic(request):
     preset_id = request.POST.get('preset_id')
     try:
-        presete = get_objects(obj=Preset.objects,
+        preset = get_objects(obj=Preset.objects,
                               pk=preset_id, )
-        presete.delete()
+        preset.delete()
         response_data = {'message': 'Предмет успешно удален'}
         print('Предмет успешно удален')
     except Preset.DoesNotExist:

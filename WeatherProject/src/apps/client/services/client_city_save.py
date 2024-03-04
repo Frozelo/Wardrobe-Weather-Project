@@ -2,6 +2,7 @@ from src.apps.client.models import Client
 from src.core.services import get_objects
 
 
+# TODO insert getattr for this func
 def get_city_for_client(request):
     region = request.POST.get('region')
     city = request.POST.get('city')
@@ -19,3 +20,4 @@ def get_city_for_client(request):
         print(e)
         client = Client(user=user_instance, region=region, city=city)
         client.save()
+
