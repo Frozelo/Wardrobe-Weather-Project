@@ -11,8 +11,8 @@
     <form method="post" action="{% url 'save_clothes_view' %}">
         {% csrf_token %}
         <div class="form-group">
-            <label for="description">Description:</label>
-            <input type="text" name="description" id="description" class="form-control" required>
+            <label for="description_of_clothes">Description:</label>
+            <input type="text" name="description_of_clothes" id="description_of_clothes" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="brand">Brand:</label>
@@ -27,8 +27,8 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="min_temp">Temperature range:</label>
-            <input type="text" name="optimal_temp_range" id="optimal_temp_range" class="form-control" required>
+            <label for="optimal_temperature">Temperature range:</label>
+            <input type="text" name="optimal_temperature" id="optimal_temperature" class="form-control" required>
         </div>
         <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>

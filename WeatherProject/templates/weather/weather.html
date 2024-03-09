@@ -2,43 +2,296 @@
 <html>
 <head>
     <title>Weather App</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e5ec;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .outfit-option-container {
+            margin-bottom: 20px;
+        }
+
+        .form-select {
+            margin-bottom: 15px;
+            background-color: #f7f9fc;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            color: #333333;
+        }
+
+        .btn-submit {
+            margin-top: 20px;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+
+        /* Стили для заголовков */
+        h1, h2 {
+            color: #333333;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #333333;
+            text-decoration: none;
+        }
+
+        .modal-content input[type="text"],
+        .modal-content input[type="email"],
+        .modal-content select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f7f9fc;
+            color: #333333;
+        }
+
+        .modal-content input[type="text"]:focus,
+        .modal-content input[type="email"]:focus,
+        .modal-content select:focus {
+            outline: none;
+            box-shadow: 0 0 5px #3498db;
+        }
+
+        .modal-content input[type="submit"] {
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: #ffffff;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-content input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+    </style>
 </head>
 <body>
-<h1>Weather App</h1>
-<h2><a href="http://127.0.0.1:8000/api/wardrobe/?owner={{ request.user.id }}">Перейти в гардероб</a>
-</h2>
-<form method="POST" action="{% url 'fetch_weather' %}">
-    {% csrf_token %}
-    <div class="outfit-option-container">
-        <h2>Select Style:</h2>
-        <select name="style" id="style" class="form-control" required>
-            <option value="casual">Casual</option>
-            <option value="sport">Sport</option>
-            <!-- Добавьте другие стили -->
-        </select>
 
-        <h2>Select Season:</h2>
-        <select name="season" id="season" class="form-control" required>
-            <option value="Summer">Summer</option>
-            <option value="Autumn">Autumn</option>
-            <option value="Winter">Winter</option>
-            <!-- Добавьте другие сезоны -->
-        </select>
+<div class="container">
+    <h1 class="text-center mb-4">Weather App</h1>
+    <h2><a href="http://127.0.0.1:8000/api/v1/wardrobe/clothes/?owner={{ request.user.id }}">Перейти в гардероб</a></h2>
+
+    <form id="weatherForm" method="POST" action="{% url 'fetch_weather' %}">
+        {% csrf_token %}
+        <div class="outfit-option-container">
+            <h2>Select Style:</h2>
+            <select name="style" id="style" class="form-select" required>
+                <option value="casual">Casual</option>
+                <option value="sport">Sport</option>
+            </select>
+        </div>
+
+        <!-- Стилизованные списки предметов -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <h2>Голова</h2>
+                <select name="head" id="head" class="form-select">
+                    <option value="Cap">Шапка</option>
+                    <option value="Headphones">Наушники</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <h2>Верх тела</h2>
+                <select name="upper_body" id="upper_body" class="form-select">
+                    <option value="Jacket">Куртка</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <h2>Вторичный верх</h2>
+                <select name="upper_body_secondary" id="upper_body_secondary" class="form-select">
+                    <option value="T-shirt">Футболка</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <h2>Низ тела</h2>
+                <select name="bottom_body" id="bottom_body" class="form-select">
+                    <option value="Pants">Штаны</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <h2>Вторичный низ</h2>
+                <select name="bottom_body_secondary" id="bottom_body_sec" class="form-select">
+                    <option value="Socks">Носки</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <h2>Ступни</h2>
+                <select name="feet" id="feet" class="form-select">
+                    <option value="Sneakers">Кросовки</option>
+                    <option value="Running shoes">Беговые кросовки</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="outfit-option-container">
+            <h2>Options:</h2>
+            <label>
+                <input type="checkbox" name="favorites" id="favorites" value="true">
+                Create outfit only from favorites
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">Get Weather</button>
+    </form>
+
+    <!-- Модальное окно -->
+    <div id="clothesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <!-- Внутренняя форма для сохранения шаблона -->
+            <form id="savePresetForm" method="POST" action="{% url 'save_preset' %}">
+                {% csrf_token %}
+                <div id="clothesListContainer">
+                    {% if clothes_list_2 %}
+                    <h2>Clothes List:</h2>
+                    <ul id="clothesList">
+                        {% for key, value in clothes_list_2.items %}
+                        <li>{{ key }} - {{ value.item }}</li>
+                        {% endfor %}
+                    </ul>
+                    <!-- Скрытое поле для отправки данных clothes_list на сервер -->
+                    <input name="name" value="{{name}}">
+                    <input type="hidden" name="clothes_list" value="{{ clothes_list_2 }}">
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary">Сохранить шаблон</button>
+            </form>
+        </div>
     </div>
-    <button type="submit">Get Weather</button>
-</form>
-{% if temperature and humidity %}
-<h2>Weather for {{ city }}:</h2>
-<p>Temperature: {{ temperature }}°C</p>
-<p>Humidity: {{ humidity }}%</p>
-{% elif city %}
-<p>No weather data available for {{ city }}.</p>
-{% endif %}
-<p>{{clothes_set}}</p>
+</div>
 
-<form method="POST" action="{% url 'get_clothes_set_view' %}">
-    {% csrf_token %}
-    <button type="submit">Get Clothes Set</button>
-</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Отправка данных формы через Ajax
+    function submitPresetForm() {
+        var form = document.getElementById('savePresetForm');
+        var formData = new FormData(form);
+        var favoritesCheckbox = document.getElementById('favorites');
+        formData.append('favorites', favoritesCheckbox.checked ? 'true' : 'false');
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                closeModal();
+            } else {
+                console.error('Ошибка сохранения шаблона');
+            }
+        })
+        .catch(error => {
+            console.error('Произошла ошибка:', error);
+        });
+    }
+
+    window.onload = function () {
+        var clothesList = document.getElementById('clothesList');
+        var modal = document.getElementById('clothesModal');
+
+        if (clothesList) {
+            modal.style.display = 'block';
+        }
+    };
+
+    // Закрытие модального окна при клике за его пределами
+    window.onclick = function (event) {
+        var modal = document.getElementById('clothesModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Закрытие модального окна при клике на крестик
+    function closeModal() {
+        var modal = document.getElementById('clothesModal');
+        modal.style.display = 'none';
+    }
+
+
+
+
+</script>
+
 </body>
 </html>

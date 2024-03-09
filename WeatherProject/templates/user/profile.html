@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный профиль</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'user/profile.css' %}">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-light text-dark py-4">
+  <div class="container text-center">
+    <h1 class="display-4">Мой личный профиль</h1>
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-dark">Log Out</button>
+    </form>
+  </div>
+</header>
+
+<!-- Навигация (Sidebar) -->
+<div class="container mt-4">
+  <div class="row">
+    <nav class="col-md-3">
+      <div class="list-group">
+        <a href="#profile" class="list-group-item list-group-item-action active">Профиль</a>
+        <a href="settings" class="list-group-item list-group-item-action">Настройки</a>
+        <a href="saved-presets" class="list-group-item list-group-item-action">Сохранённые шаблоны</a>
+      </div>
+    </nav>
+
+    <!-- Основной контент (Main Content) -->
+
+
+    <section id="profile">
+        <div class="card">
+          <div class="card-header">
+            <h2>Профиль</h2>
+          </div>
+          <div class="card-body">
+            <!-- Переместим форму внутрь блока "Профиль" -->
+            <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.avatar }}
+              <button type="submit" class="btn btn-primary">Загрузить аватар</button>
+            </form>
+            <!-- Аватар пользователя -->
+            {% if client.avatar %}
+              <img src="{{ client.avatar.url }}" alt="Avatar" class="avatar">
+            {% else %}
+              <p>No image available</p>
+            {% endif %}
+            <!-- Личная информация пользователя -->
+            <div class="user-info">
+              <p><strong>Имя:</strong> {{name}}</p>
+              <p><strong>Фамилия:</strong> {{last_name}}</p>
+              <p><strong>Регион:</strong> {{region}}</p>
+              <p><strong>Город:</strong> {{city}}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <section id="wardrobe">
+      <div class="card mt-4">
+        <div class="card-header">
+          <h2>Мой гардероб</h2>
+        </div>
+        <div class="card-body">
+          {% if not clothes_by_type %}
+          <p>В гардеробе нет записей с вещами</p>
+
+          {% else %}
+          <p>В вашем гардеробе есть следующие вещи:</p>
+          {% for type_name, clothes_list in clothes_by_type.items %}
+            <div class="clothes-category">
+              <h3 class="category-title">{{ type_name }}</h3>
+              <ul class="clothes-list">
+                {% for item in clothes_list %}
+                  <li class="clothes-item">
+                    <div class="clothes-details">
+                      <div class="clothes-actions">
+                        <form method="post" action="{% url 'delete_clothes_view' %}">
+                          {% csrf_token %}
+                          <input type="hidden" name="id" value="{{ item.id }}">
+                          <button type="submit" class="btn btn-danger">
+                            Удалить вещь
+                          </button>
+                        </form>
+                        <!-- Add the Edit button with data-toggle and data-target attributes to open the modal -->
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editClothesModal{{ item.id }}">
+                          Редактировать вещь
+                        </button>
+                      </div>
+                      <div class="clothes-image">
+                        {% if item.photo_of_clothes %}
+                          <img src="{{ item.photo_of_clothes.url }}" alt="{{ item.name }}">
+                        {% else %}
+                          <p>No image available</p>
+                        {% endif %}
+                      </div>
+                      <div class="clothes-info">
+                        <h4 class="clothes-name">{{ item.description_of_clothes }}</h4>
+                        <p class="clothes-weather">Идеально для: {{ item.optimal_temperature }}</p>
+                      </div>
+                    </div>
+                  </li>
+                  <div class="modal fade" id="editClothesModal{{ item.id }}" tabindex="-1" aria-labelledby="editClothesModalLabel{{ item.id }}" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <main>
+                          <h2>Редактирование вещи</h2>
+                          <form method="post" action = "{% url 'update_clothes_view' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{ item.id }}">
+
+                            <label for="id_description">Описание:</label>
+                            <input type="text" name="description_of_clothes" id="id_description" value="{{ item.description_of_clothes }}">
+
+                            <label for="id_brand">Бренд:</label>
+                            <input type="text" name="brand" id="id_brand" value="{{ item.brand }}">
+
+                            <label for="optimal_temperature">Температурный диапазон (min:max):</label>
+                            <input type="text" name="optimal_temperature" id="optimal_temperature" value="{{ item.optimal_temperature.min_temp }}:{{ item.optimal_temperature.max_temp }}">
+
+                            <label>Сезоны:</label>
+                            <select name="season" multiple>
+                                {% for season in all_seasons %}
+                                    <option value="{{ season.id }}" {% if season.id in item.season.all %}selected{% endif %}>{{ season.season_name }}</option>
+                                {% endfor %}
+                            </select>
+
+                            <label>Стили:</label>
+                            <select name="style" multiple>
+                                {% for style in all_styles %}
+                                    <option value="{{ style.id }}" {% if style.id in item.style.all %}selected{% endif %}>{{ style.name }}</option>
+                                {% endfor %}
+                            </select>
+
+
+                            <button type="submit">Сохранить изменения</button>
+                          </form>
+                        </main>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+
+              </ul>
+            </div>
+          {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>

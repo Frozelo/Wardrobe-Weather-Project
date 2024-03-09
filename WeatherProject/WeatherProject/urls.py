@@ -15,29 +15,27 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 
 from django.urls import path, include, re_path
 from rest_framework.routers import SimpleRouter
 
-from src.wardrobe.views import ClothesViewSet, UserViewSet, save_clothes_view, \
-    auth_view
-from src.weather.views import get_city_for_client_view
+from src.apps.wardrobe.views import auth_view
 
-router_cloths = SimpleRouter()
+
 router_users = SimpleRouter()
-router_cloths.register(r'wardrobe', ClothesViewSet, basename='wardrobe')
-router_users.register(r'users', UserViewSet)
-# router_cloths.register('', ClothesJSONViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("__debug__/", include("debug_toolbar.urls")),
     re_path('', include('social_django.urls', namespace='social')),
     path('auth/', auth_view),
-    path('weather/', include('src.weather.urls')),
-    path('weather/', include('src.weather.urls')),
-    path('api/', include(router_cloths.urls)),
-    path('api/  ', include(router_users.urls)),
-    path('wardrobe/save/', save_clothes_view, name='save_clothes_view'),
-    path('city/save/', get_city_for_client_view, name='get_city_for_client_view')
+    path('weather/', include('src.apps.weather.urls')),
+    path('wardrobe/', include('src.apps.wardrobe.urls')),
+    path('profile/', include('src.apps.client.urls')),
+    path('api/v1/', include('src.api.urls')),
+    path("__debug__/", include("debug_toolbar.urls")),
+
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
