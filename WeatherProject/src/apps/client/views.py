@@ -1,4 +1,5 @@
 from django.contrib.auth import logout
+from django.core.cache import cache
 from django.db.models import Sum
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -9,7 +10,6 @@ from src.apps.wardrobe.models import group_clothes_by_type, Preset
 from src.apps.weather.services.fetch_weather import fetch_weather_by_client
 from .services.user_auth import user_auth_logic
 from django.shortcuts import render, redirect, get_object_or_404
-from .services.fetch_client import get_client
 from src.apps.wardrobe.services.preset_logic import likes_logic, delete_preset_logic
 from .services.avatar_upload import avatar_upload_form_logic
 from ..weather.services.fetch_sesason import get_all_seasons
@@ -32,27 +32,36 @@ def user_logout_view(request):
         return redirect('user_auth')
 
 
+# TODO Add caching system. Improve the code
 @login_required
 def profile(request):
     user = request.user
     client = get_object_or_404(Client, user=user)
     region, city = fetch_client_info(client)
     seasons_list = get_all_seasons()
-    weather_data, _ = fetch_weather_by_client(city)
+
+    # Получение погодных данных из кэша
+    weather_data = cache.get(city)
+    if not weather_data:
+        # Если данные не найдены в кэше, получаем их из API и кэшируем на 15 минут
+        weather_data, _ = fetch_weather_by_client(city)
+        cache.set(city, weather_data, timeout=900)  # 15 минут * 60 секунд = 900 секунд
+
     clothes_by_type = group_clothes_by_type(user)
     first_name = user.first_name
     last_name = user.last_name
     form = avatar_upload_form_logic(request, client)
-    context = {'client': client,
-               'name': first_name,
-               'last_name': last_name,
-               'region': region,
-               'city': city,
-               'all_seasons': seasons_list,
-               'clothes_by_type': clothes_by_type,
-               'weather_data': weather_data,
-               'form': form
-               }
+    context = {
+        'client': client,
+        'name': first_name,
+        'last_name': last_name,
+        'region': region,
+        'city': city,
+        'all_seasons': seasons_list,
+        'clothes_by_type': clothes_by_type,
+        'weather_data': weather_data,
+        'form': form
+    }
     return render(request, 'user/profile.html', context)
 
 
@@ -60,7 +69,6 @@ def settings_view(request):
     return render(request, 'user/settings.html')
 
 
-# TODO Database logic in view - make core service
 def saved_presets_view(request):
     user = request.user
     presets = filter_objects(obj=Preset.objects,

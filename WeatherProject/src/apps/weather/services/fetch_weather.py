@@ -1,5 +1,7 @@
 import datetime
 import requests
+from django.views.decorators.cache import cache_page
+
 from src.core.open_weather_api_service import get_weather_api_key_from_dotenv
 
 

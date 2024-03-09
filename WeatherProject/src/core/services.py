@@ -28,10 +28,12 @@ def create_objects(obj: callable, **kwargs):
     print(kwargs)
     return obj.create(**kwargs)
 
+
 def update_objects(obj: callable, **kwargs):
     for attr, ids, in kwargs.items():
         print(kwargs)
         setattr(obj, attr, ids)
+
 
 def set_related_objects(obj, **kwargs):
     for field_name, ids in kwargs.items():

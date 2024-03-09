@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.db import models
 from src.core.services import filter_objects
-# Create your models here.
 from src.apps.weather.models import Season
 
 

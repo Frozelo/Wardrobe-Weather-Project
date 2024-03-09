@@ -21,11 +21,10 @@ from django.conf import settings
 from django.urls import path, include, re_path
 from rest_framework.routers import SimpleRouter
 
-from src.apps.wardrobe.views import UserViewSet, auth_view
+from src.apps.wardrobe.views import auth_view
 
 
 router_users = SimpleRouter()
-router_users.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -6,25 +6,27 @@ from src.apps.client.models import Client
 
 # TODO Client exist fix with core services
 from src.core.services import filter_objects
+from src.core.request_service import get_request_params
 
 
-def user_auth_logic(request):
+def get_user_login_params(request):
     try:
-        username = request.POST['username']
-        password = request.POST['password']
+        return get_request_params(request, params=('username', 'password'))
     except KeyError as e:
         return JsonResponse({'error': str(e), 'message': 'Missing credentials'}, status=400)
 
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-        login(request, user)
-        # if Client.objects.filter(user=user).exists():
-        if filter_objects(obj=Client.objects,
-                          user=user,
-                          exist=True):
-            print('yes!')
-            return redirect('profile')
-        else:
-            return redirect('/profile/settings')
-    else:
+
+def user_auth_logic(request):
+    login_params, error_message = get_user_login_params(request)
+    if not login_params:
+        return JsonResponse({'error': error_message, 'message': 'Missing credentials'}, status=400)
+
+    user = authenticate(request, **login_params)
+    if user is None:
         return JsonResponse({'error': 'Invalid credentials'}, status=401)
+
+    login(request, user)
+    if filter_objects(obj=Client.objects, user=user, exist=True):
+        return redirect('profile')
+    else:
+        return redirect('/profile/settings')
